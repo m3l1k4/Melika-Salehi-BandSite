@@ -1,0 +1,19 @@
+
+
+
+
+
+.photo-gallery-grid{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+    &__img{
+        width: 30%;
+        padding: 1.5% 1% 1.5% 1%;
+       
+        position: relative;
+    }
+}

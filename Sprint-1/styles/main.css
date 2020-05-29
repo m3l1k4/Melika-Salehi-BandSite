@@ -1,0 +1,17 @@
+.photo-gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.photo-gallery-grid__img {
+  width: 30%;
+  padding: 1.5% 1% 1.5% 1%;
+  position: relative;
+}
+/*# sourceMappingURL=main.css.map */
