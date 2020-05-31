@@ -5,10 +5,12 @@
 
 
 .photo-gallery{
-
+    font-family: 'Avenir-Next-Bold';
+    color: #323232;
     @include desktop{
         margin-right: 10%;
         margin-left: 10%;
+        padding-bottom: 2%;
   
     }
 
@@ -62,23 +64,66 @@
 }
 
 
-footer {
+/*============*/
+
+.footer {
     background-color: #323232;
-    color: #E1e1e1e1;
-  padding-right: 12%;
-  padding-left: 12%;
-  position: relative;
+    color: #FAFAFA;
+    position: relative;
   
+    &__copyright{
+        font-family: 'Avenir-Next-Medium';
+          @include desktop{
+            margin-bottom: 1rem;  
+         }
+    
+  
+    }
+
+  
+    @include desktop{
+        padding-right: 12%;
+        padding-left: 12%;
+        padding-bottom: 5%;
+    }
+
+    @include mobile{
+
+    }
+
+    @include tablet{
+
+    }
+
 
 }
 
 .footer__logo{
-    height: 30px;
-    padding-right: 32px;
-    position: absolute;
 
-    right: 10%;
-    top:5%;}
+    @include desktop{
+    width: 110px;
+   
+        position: absolute;
+        right: 11%;
+        top:56px;
+
+    }
+
+    @include mobile{
+
+
+    }
+
+    @include tablet{
+
+
+    }
+
+
+
+    
+
+}
 
 .footer-heading{
     display: flex;
@@ -92,16 +137,35 @@ footer {
     &__title{
         font-size: 36px;
         line-height: 32px;
-        padding-right: 1rem;
         font-family: 'Avenir-Next-Bold';
+       
+        @include desktop{
+         padding-right: 1rem;
+         padding-top: 2rem;   
+        }
+        
+      
+        
     }
    
+    &__icons{
+        @include desktop{
+            padding-left: 40px;  
+        }
+
+    }
         &__img{
             height: auto;
-            padding:0 2rem 0rem 2rem;
-            align-self: flex-end;
+            padding-right: 32px;
+            
+            @include desktop{
+                 align-self: flex-end; 
+            }
+          
         } 
     
+
+
      
 
 }
@@ -113,24 +177,25 @@ footer {
     position: relative;
     display: flex;
  
-    justify-content: space-around; 
+    padding-right: 20%;
+    justify-content: space-between;
 
-&--column{
+
     
     &--name{
-       font-size: 24px;
-        line-height: 32px;
+       font-size: 16px;
+        line-height: 24px;
        
     }
     &--address{
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     &--email{
-       font-size: 16px;
-        line-height: 24px;  
+       font-size: 14px;
+        line-height: 20px;  
     }
-}
+
     
 }

@@ -78,10 +78,16 @@
   src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
 }
 
+.photo-gallery {
+  font-family: 'Avenir-Next-Bold';
+  color: #323232;
+}
+
 @media (min-width: 1200px) {
   .photo-gallery {
     margin-right: 10%;
     margin-left: 10%;
+    padding-bottom: 2%;
   }
 }
 
@@ -138,20 +144,38 @@
   }
 }
 
-footer {
+/*============*/
+.footer {
   background-color: #323232;
-  color: #E1e1e1e1;
-  padding-right: 12%;
-  padding-left: 12%;
+  color: #FAFAFA;
   position: relative;
 }
 
-.footer__logo {
-  height: 30px;
-  padding-right: 32px;
-  position: absolute;
-  right: 10%;
-  top: 5%;
+.footer__copyright {
+  font-family: 'Avenir-Next-Medium';
+}
+
+@media (min-width: 1200px) {
+  .footer__copyright {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__logo {
+    width: 110px;
+    position: absolute;
+    right: 11%;
+    top: 56px;
+  }
 }
 
 .footer-heading {
@@ -176,15 +200,32 @@ footer {
 .footer-heading__title {
   font-size: 36px;
   line-height: 32px;
-  padding-right: 1rem;
   font-family: 'Avenir-Next-Bold';
+}
+
+@media (min-width: 1200px) {
+  .footer-heading__title {
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-heading__icons {
+    padding-left: 40px;
+  }
 }
 
 .footer-heading__img {
   height: auto;
-  padding: 0 2rem 0rem 2rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  padding-right: 32px;
+}
+
+@media (min-width: 1200px) {
+  .footer-heading__img {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 .footer__body {
@@ -193,22 +234,24 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  padding-right: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.footer__body--column--name {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.footer__body--column--address {
+.footer__body--name {
   font-size: 16px;
   line-height: 24px;
 }
 
-.footer__body--column--email {
-  font-size: 16px;
-  line-height: 24px;
+.footer__body--address {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__body--email {
+  font-size: 14px;
+  line-height: 20px;
 }
 /*# sourceMappingURL=main.css.map */

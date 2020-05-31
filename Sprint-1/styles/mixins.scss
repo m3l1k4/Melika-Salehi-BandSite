@@ -13,6 +13,28 @@
     margin: 0 2%;
 }
 
+@mixin desktop-padding{
+
+    padding-right: 12%;
+    padding-left: 12%;
+}
+
+@mixin mobile-padding{
+padding-left: 24px;
+}
+
+@mixin mobile-logo-position{
+    position: absolute;
+    right: 5%;
+    top:56px;
+}
+
+@mixin desktop-logo-position{
+            position: absolute;
+        right: 11%;
+        top:56px;
+}
+
 @mixin tablet{
    @media (min-width:$tablet){
        @content;
