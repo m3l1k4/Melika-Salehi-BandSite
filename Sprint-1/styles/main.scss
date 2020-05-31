@@ -1,19 +1,136 @@
 
+@import "mixins.scss";
+@import "variables.scss";
+@import"fonts.scss";
 
 
+.photo-gallery{
+
+    @include desktop{
+        margin-right: 10%;
+        margin-left: 10%;
+  
+    }
+
+    &__header{
+        @include mobile{
+            padding-left:  12px;
+            
+        } 
+
+        @include tablet{
+            padding-left: 12px;
+        }
+    }
+
+}
 
 
 .photo-gallery-grid{
 
-    display: flex;
+   display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
+    flex-direction: row;
+    justify-content: space-evenly;
 
-    &__img{
-        width: 30%;
-        padding: 1.5% 1% 1.5% 1%;
+   
+    &__img {
+     
+        
+
+        @include mobile{
+            width: 288px;
+            height: 162px;
+            padding: 16px 24px;
+        }
+  
+      @include tablet{
+       width: 224px;
+        height: 126px; 
+        padding: 12px 8px;
+        
+      }
+      @include desktop {
+         width: 287px;
+        height: 161px; 
+        padding: 12px 12px;
+        flex-basis:30%;
        
-        position: relative;
+    
+          }
     }
+}
+
+
+footer {
+    background-color: #323232;
+    color: #E1e1e1e1;
+  padding-right: 12%;
+  padding-left: 12%;
+  position: relative;
+  
+
+}
+
+.footer__logo{
+    height: 30px;
+    padding-right: 32px;
+    position: absolute;
+
+    right: 10%;
+    top:5%;}
+
+.footer-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+    align-content: left;
+    position: relative;
+    
+    
+    &__title{
+        font-size: 36px;
+        line-height: 32px;
+        padding-right: 1rem;
+        font-family: 'Avenir-Next-Bold';
+    }
+   
+        &__img{
+            height: auto;
+            padding:0 2rem 0rem 2rem;
+            align-self: flex-end;
+        } 
+    
+     
+
+}
+
+
+
+.footer__body{
+    font-family: 'Avenir-Next-Medium';
+    position: relative;
+    display: flex;
+ 
+    justify-content: space-around; 
+
+&--column{
+    
+    &--name{
+       font-size: 24px;
+        line-height: 32px;
+       
+    }
+    &--address{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--email{
+       font-size: 16px;
+        line-height: 24px;  
+    }
+}
+    
 }
