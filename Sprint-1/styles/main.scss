@@ -70,7 +70,20 @@
     background-color: #323232;
     color: #FAFAFA;
     position: relative;
-  
+    margin-left:-10px;
+    margin-right:-10px;
+ 
+   
+    @include tablet-padding;
+    @include desktop{
+        @include desktop-padding;
+    } 
+ 
+    @include mobile{
+   
+    }  
+
+
     &__copyright{
         font-family: 'Avenir-Next-Medium';
           @include desktop{
@@ -81,47 +94,16 @@
     }
 
   
-    @include desktop{
-        padding-right: 12%;
-        padding-left: 12%;
-        padding-bottom: 5%;
-    }
-
-    @include mobile{
-
-    }
-
-    @include tablet{
-
-    }
 
 
 }
 
 .footer__logo{
-
+@include tablet-logo-position;
     @include desktop{
-    width: 110px;
-   
-        position: absolute;
-        right: 11%;
-        top:56px;
+        @include desktop-logo-position;
 
-    }
-
-    @include mobile{
-
-
-    }
-
-    @include tablet{
-
-
-    }
-
-
-
-    
+    }    
 
 }
 
@@ -138,30 +120,19 @@
         font-size: 36px;
         line-height: 32px;
         font-family: 'Avenir-Next-Bold';
-       
-        @include desktop{
-         padding-right: 1rem;
-         padding-top: 2rem;   
-        }
-        
-      
+        padding-right: 1rem;
+        padding-top: 2rem;   
         
     }
    
-    &__icons{
-        @include desktop{
-            padding-left: 40px;  
-        }
-
+    &__icons{ 
+            padding-left: 40px;    
     }
         &__img{
             height: auto;
             padding-right: 32px;
-            
-            @include desktop{
-                 align-self: flex-end; 
-            }
-          
+             align-self: flex-end; 
+
         } 
     
 
@@ -176,10 +147,11 @@
     font-family: 'Avenir-Next-Medium';
     position: relative;
     display: flex;
- 
     padding-right: 20%;
     justify-content: space-between;
-
+    @include tablet{
+        padding-right: 5%;
+    }
 
     
     &--name{
