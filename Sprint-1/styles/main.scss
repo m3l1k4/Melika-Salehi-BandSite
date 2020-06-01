@@ -13,39 +13,146 @@
     color: #FAFAFA;
 }
 .nav-bar{
-    padding-left:15%;
-    padding-top:2rem;
+ 
+
     display: flex;
     justify-content: left;
     align-items: baseline;
-    flex-direction: row;
+   
     background-color: #323232;
     font-family:'Avenir-Next-Medium' ;
-    font-size: 16px;
+
     
-   
+
+        @include mobile{
+            flex-direction: column;
+            padding-left:0;
+            font-size: 16px;
+            padding-top:1rem;
+        }
+
+        @include tablet{
+            padding-left:5%;
+            padding-top:2rem;
+            font-size: 16px;
+            flex-direction: row;
+        }
+
+        @include desktop{
+            padding-left:15%;
+            padding-top:2rem;
+            font-size: 16px; 
+            flex-direction: row;
+        }
+    
    
 
     &__list{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+       
         margin:0;
+        padding:0;
+        @include mobile{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 1rem;
+        }
+
     }
 
     &__text{
-        margin-right:4rem;
+       
         list-style-type: none;
+      
+        &--passive{
+            @include mobile{
+                padding-left: 2.5rem;
+                padding-right: 2rem ;
+            }
+
+            @include tablet{
+                padding-left:0;
+                padding-right: 0 ;
+            }
+
+            @include desktop{
+                padding-left: 0;
+                padding-right: 0 ;
+            }
+
+
+
+        }
+
+       
         &--active{
             border-bottom: 3px solid white;
-            padding-bottom: 1.5rem;
+        
+            
+            @include mobile{
+            
+                padding-bottom: 1rem;
+                text-align: center;
+                padding-left:2.5rem;
+                padding-right: 2.5rem;
+                margin-right:0;
+            }
+
+            @include tablet{
+                padding-bottom: 1.5rem;
+                margin-right:4rem;
+                padding-left: 0;
+                padding-right: 0;
+
+            }
+
+            @include desktop{
+                padding-bottom: 1.5rem;
+                margin-right:4rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        
+   
            
         }
 
     }
 
     &__logo{
-        padding-right: 1rem;
+   
+
+        @include mobile{
+            padding-left: 30%;;
+            padding-right: 0;
+            padding-bottom: 1rem;
+        }
+
+        @include tablet{
+            padding-right: 3rem;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
+        @include desktop{
+            padding-right: 3rem;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -73,7 +180,7 @@
                 font-size: 24px;
                 line-height: 32px;
                 padding-top: 15%;
-                padding-left: 0;
+                padding-left: 5%;
                 padding-bottom:15%;
             }
 
@@ -81,7 +188,7 @@
                 font-size: 60px;
                 line-height: 68px;
                 padding-top: 15%;
-                padding-left: 0;
+                padding-left: 5%;
                 padding-bottom:15%;
             }
 
@@ -113,14 +220,24 @@ color: #323232;
 
             @include mobile{
                 padding-left: 3%;
+                
+                font-size: 24px;
+                line-height: 32px;
+    
             }
 
             @include tablet{
                 padding-left: 3%;
+                font-size: 36px;
+                line-height: 44px;
+    
             }
 
             @include desktop{
-                padding-left: 15%;  
+                padding-left: 15%;
+                font-size: 36px;
+                line-height: 44px;
+     
             }
 
 
@@ -132,6 +249,7 @@ color: #323232;
         @include mobile{
             width: 288px;
             height: auto;
+            padding-left:3%;
            
         }
   
@@ -159,19 +277,28 @@ color: #323232;
      
     &__quote{
         font-family: 'Avenir-Next-Bold';
-        font-size: 24px;
-        line-height: 32px;
+
             @include mobile{
                 padding-left: 3%;
+                padding-right:1%;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: 'Avenir-Next-Demi';
             }
 
             @include tablet{
                 padding-left: 3%;
+                padding-right:0;
+                font-size: 24px;
+                line-height: 32px;
             }
 
             @include desktop{
                 padding-left: 15%;  
                 padding-right: 15%;
+                font-size: 24px;
+                line-height: 32px;
+                
             }
     }
     
@@ -201,64 +328,88 @@ color: #323232;
  
      
         &--title{
-            font-family:'Avenir-Next-Bold' ;
-            font-size: 24px;
-            font-weight: 32px;
+
             
 
             @include mobile{
                 padding-left: 3%;
+                font-size: 16px;
+                font-family:'Avenir-Next-Demi' ;
+                font-weight: 24px;
             }
 
             @include tablet{
                 padding-left: 3%;
+                font-family:'Avenir-Next-Bold' ;
+                font-size: 24px;
+                font-weight: 32px;
             }
 
             @include desktop{
                 padding-left: 15%;  
+                font-family:'Avenir-Next-Bold' ;
+                font-size: 24px;
+                font-weight: 32px;
             }
 
         }
 
         &--body{
-            padding: 0 13% 0 11%;
-
-            @include mobile{
-                padding-left: 3%;
-            }
-
-            @include tablet{
-                padding: 0 1% 0 1%; 
-            }
-
-            @include desktop{
-                padding: 0 13% 0 11%; 
-            }
-
-
-            
+           
             display: flex;
-            
+
             justify-content: space-between;
             font-family: 'Avenir-Next-Light';
             font-size: 14px;
             line-height: 22px;
+
+            @include mobile{
+                flex-direction: column;
+                padding-left: 3%;
+                padding-bottom: 2rem;
+            }
+
+            @include tablet{
+                justify-content: space-between;
+                padding: 0 1% 0 1%; 
+                flex-direction: row;
+                padding-bottom: 0;
+            }
+
+            @include desktop{
+                justify-content: space-between;
+                padding: 0 13% 0 11%; 
+                flex-direction: row;
+                padding-bottom: 0;
+            }
+
+
+            
+         
 
             &--text{
                 margin: 0;
 
 
                 @include mobile{
-                    padding-left: 3%;
+                    padding-left: 1%;
+                    padding-top: 1rem;
+                    padding-right: 0;
+                   
                 }
     
                 @include tablet{
                     padding-left:1rem;
                     padding-right: 1rem;
+                    padding-top: 0;
+                  
                 }
     
                 @include desktop{
                     padding-left:3rem;
+                    padding-top: 0;
+                    padding-right: 0;
+               
                 }
              
             }
