@@ -89,19 +89,23 @@
 
 .nav-bar {
   padding-left: 15%;
+  padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #323232;
   font-family: 'Avenir-Next-Medium';
-  color: #FAFAFA;
+  font-size: 16px;
 }
 
 .nav-bar__list {
@@ -115,11 +119,21 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
 }
 
 .nav-bar__text {
-  padding-right: 3rem;
+  margin-right: 4rem;
   list-style-type: none;
+}
+
+.nav-bar__text--active {
+  border-bottom: 3px solid white;
+  padding-bottom: 1.5rem;
+}
+
+.nav-bar__logo {
+  padding-right: 1rem;
 }
 
 .hero-container {

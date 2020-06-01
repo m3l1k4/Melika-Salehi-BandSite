@@ -14,28 +14,38 @@
 }
 .nav-bar{
     padding-left:15%;
+    padding-top:2rem;
     display: flex;
     justify-content: left;
+    align-items: baseline;
     flex-direction: row;
     background-color: #323232;
     font-family:'Avenir-Next-Medium' ;
+    font-size: 16px;
+    
    
-    color: #FAFAFA;
+   
 
     &__list{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin:0;
     }
 
     &__text{
-        padding-right:3rem;
+        margin-right:4rem;
         list-style-type: none;
-        
+        &--active{
+            border-bottom: 3px solid white;
+            padding-bottom: 1.5rem;
+           
+        }
+
     }
 
     &__logo{
-
+        padding-right: 1rem;
     }
 }
 
