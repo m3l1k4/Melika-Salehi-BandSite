@@ -141,7 +141,7 @@ a{
    
 
         @include mobile{
-            padding-left: 30%;;
+            padding-left: 50%;;
             padding-right: 0;
             padding-bottom: 1rem;
         }
@@ -257,19 +257,16 @@ color: #323232;
            
         }
   
-      @include tablet{
-       width: 720px;
-        height: auto; 
-        padding-left:3%;
-      
+        @include tablet{
+            width: 720px;
+            height: auto; 
+            padding-left:3%;
         
-      }
-      @include desktop {
-         width: 896px;
-        height: auto; 
-        padding-left: 15%;
-      
-       
+          }
+         @include desktop {
+            width: 896px;
+            height: auto; 
+            padding-left: 15%;   
     
           }
         

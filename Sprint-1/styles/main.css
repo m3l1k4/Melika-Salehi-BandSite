@@ -252,7 +252,7 @@ a {
 
 @media (min-width: 320px) {
   .nav-bar__logo {
-    padding-left: 30%;
+    padding-left: 50%;
     padding-right: 0;
     padding-bottom: 1rem;
   }
