@@ -56,7 +56,7 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: auto;
     box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6,.5);
  
         &__title{
@@ -67,6 +67,32 @@
             line-height: 68px;
             padding-left: 15%;
             padding-top: 15%;
+            padding-bottom:15%;
+
+            @include mobile{
+                font-size: 24px;
+                line-height: 32px;
+                padding-top: 15%;
+                padding-left: 0;
+                padding-bottom:15%;
+            }
+
+            @include tablet{
+                font-size: 60px;
+                line-height: 68px;
+                padding-top: 15%;
+                padding-left: 0;
+                padding-bottom:15%;
+            }
+
+            @include desktop{
+                font-size: 60px;
+                line-height: 68px;
+                padding-left: 15%;
+                padding-top: 15%;
+                padding-bottom:15%;
+            }
+
 
         }
 }
@@ -81,13 +107,50 @@ color: #323232;
         
         &--title{
             font-family: 'Avenir-Next-Bold';
-            padding-left: 10%;
+            padding-left: 15%;
             font-size: 36px;
             line-height: 44px;
+
+            @include mobile{
+                padding-left: 3%;
+            }
+
+            @include tablet{
+                padding-left: 3%;
+            }
+
+            @include desktop{
+                padding-left: 15%;  
+            }
+
+
         } 
 
         &--img{
-        @include band-img-desktop;
+        
+
+        @include mobile{
+            width: 288px;
+            height: auto;
+           
+        }
+  
+      @include tablet{
+       width: 720px;
+        height: auto; 
+        padding-left:3%;
+      
+        
+      }
+      @include desktop {
+         width: 896px;
+        height: auto; 
+        padding-left: 15%;
+      
+       
+    
+          }
+        
        
         } 
 }
@@ -98,7 +161,18 @@ color: #323232;
         font-family: 'Avenir-Next-Bold';
         font-size: 24px;
         line-height: 32px;
-        padding-left: 15%;
+            @include mobile{
+                padding-left: 3%;
+            }
+
+            @include tablet{
+                padding-left: 3%;
+            }
+
+            @include desktop{
+                padding-left: 15%;  
+                padding-right: 15%;
+            }
     }
     
     &__sign{
@@ -106,7 +180,17 @@ color: #323232;
        font-family: 'Avenir-Next-Demi';;
        font-size: 16px;
        line-height: 24px;
-       padding-left: 15%;
+            @include mobile{
+                padding-left: 3%;
+            }
+
+            @include tablet{
+                padding-left: 3%;
+            }
+
+            @include desktop{
+                padding-left: 15%;  
+    }
        padding-bottom: 1rem;
     }
 
@@ -120,11 +204,38 @@ color: #323232;
             font-family:'Avenir-Next-Bold' ;
             font-size: 24px;
             font-weight: 32px;
-            padding-left: 15%;
+            
+
+            @include mobile{
+                padding-left: 3%;
+            }
+
+            @include tablet{
+                padding-left: 3%;
+            }
+
+            @include desktop{
+                padding-left: 15%;  
+            }
+
         }
 
         &--body{
             padding: 0 13% 0 11%;
+
+            @include mobile{
+                padding-left: 3%;
+            }
+
+            @include tablet{
+                padding: 0 1% 0 1%; 
+            }
+
+            @include desktop{
+                padding: 0 13% 0 11%; 
+            }
+
+
             
             display: flex;
             
@@ -135,7 +246,21 @@ color: #323232;
 
             &--text{
                 margin: 0;
-                padding-left:3rem;
+
+
+                @include mobile{
+                    padding-left: 3%;
+                }
+    
+                @include tablet{
+                    padding-left:1rem;
+                    padding-right: 1rem;
+                }
+    
+                @include desktop{
+                    padding-left:3rem;
+                }
+             
             }
 
     

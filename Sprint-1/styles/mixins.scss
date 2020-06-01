@@ -76,12 +76,21 @@
   
 }
 
+
+
 @mixin band-img-tablet{
+    height: auto;
+    width:720px;
+    padding-left: 3%; 
  
 }
 
 @mixin band-img-mobile{
 
+
+    height: auto;
+    width:288px;
+    padding-left: 15%; 
 }
 
 
