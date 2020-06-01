@@ -85,6 +85,7 @@
 a {
   width: inherit;
   height: inherit;
+  text-decoration: none;
 }
 
 .nav-bar-link {
