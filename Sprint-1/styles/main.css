@@ -78,15 +78,140 @@
   src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
 }
 
+* html {
+  margin: 0;
+}
+
+.nav-bar-link {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+.nav-bar {
+  padding-left: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #323232;
+  font-family: 'Avenir-Next-Medium';
+  color: #FAFAFA;
+}
+
+.nav-bar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-bar__text {
+  padding-right: 3rem;
+  list-style-type: none;
+}
+
+.hero-container {
+  background-image: url("../assets/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+          box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+}
+
+.hero-container__title {
+  font-family: 'Avenir-Next-Bold';
+  color: #FAFAFA;
+  margin: 0;
+  font-size: 60px;
+  line-height: 68px;
+  padding-left: 15%;
+  padding-top: 15%;
+}
+
+.feature {
+  padding-bottom: 3%;
+  color: #323232;
+}
+
+.feature__top--title {
+  font-family: 'Avenir-Next-Bold';
+  padding-left: 10%;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.feature__top--img {
+  height: auto;
+  width: 896px;
+  padding-left: 15%;
+}
+
+.feature__quote {
+  font-family: 'Avenir-Next-Bold';
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 15%;
+}
+
+.feature__sign {
+  font-family: 'Avenir-Next-Demi';
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 15%;
+  padding-bottom: 1rem;
+}
+
+.feature__article--title {
+  font-family: 'Avenir-Next-Bold';
+  font-size: 24px;
+  font-weight: 32px;
+  padding-left: 15%;
+}
+
+.feature__article--body {
+  padding: 0 13% 0 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Avenir-Next-Light';
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.feature__article--body--text {
+  margin: 0;
+  padding-left: 3rem;
+}
+
 .photo-gallery {
+  background-color: #fafafa;
   font-family: 'Avenir-Next-Bold';
   color: #323232;
+  padding-top: 1rem;
 }
 
 @media (min-width: 1200px) {
   .photo-gallery {
-    margin-right: 10%;
-    margin-left: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
     padding-bottom: 2%;
   }
 }
@@ -149,17 +274,15 @@
   background-color: #323232;
   color: #FAFAFA;
   position: relative;
-  margin-left: -10px;
-  margin-right: -10px;
-  padding-right: 2%;
-  padding-left: 2%;
+  padding-right: 3%;
+  padding-left: 3%;
   padding-bottom: 5%;
 }
 
 @media (min-width: 1200px) {
   .footer {
-    padding-right: 11%;
     padding-left: 11%;
+    padding-right: 11%;
     padding-bottom: 5%;
   }
 }
@@ -174,56 +297,88 @@
   }
 }
 
-.footer__logo {
-  position: absolute;
-  right: 2%;
-  top: 56px;
-}
-
-@media (min-width: 1200px) {
-  .footer__logo {
-    position: absolute;
-    right: 11%;
-    top: 56px;
-  }
-}
-
 .footer-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -ms-flex-line-pack: left;
-      align-content: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
-.footer-heading__title {
+@media (min-width: 1200px) {
+  .footer-heading__left-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-heading__left-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.footer-heading__left-div--title {
   font-size: 36px;
   line-height: 32px;
   font-family: 'Avenir-Next-Bold';
-  padding-right: 1rem;
+  padding-right: 4rem;
   padding-top: 2rem;
 }
 
-.footer-heading__icons {
-  padding-left: 40px;
-}
-
-.footer-heading__img {
+.footer-heading__left-div--img {
   height: auto;
   padding-right: 32px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+}
+
+.footer-heading__logo {
+  height: 20px;
+}
+
+@media (min-width: 320px) {
+  .footer-heading__logo {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-heading__logo {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-heading__logo {
+    display: block;
+  }
 }
 
 .footer__body {
@@ -232,15 +387,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 20%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .footer__body {
-    padding-right: 5%;
+    padding-right: 20%;
   }
 }
 

@@ -3,17 +3,153 @@
 @import "variables.scss";
 @import"fonts.scss";
 
+* html{
+    margin:0;
+}
+
+
+.nav-bar-link{
+    text-decoration: none;
+    color: #FAFAFA;
+}
+.nav-bar{
+    padding-left:15%;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    background-color: #323232;
+    font-family:'Avenir-Next-Medium' ;
+   
+    color: #FAFAFA;
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__text{
+        padding-right:3rem;
+        list-style-type: none;
+        
+    }
+
+    &__logo{
+
+    }
+}
+
+.hero-container{
+
+    background-image: url("../assets/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6,.5);
+ 
+        &__title{
+            font-family:'Avenir-Next-Bold' ;
+            color: #FAFAFA; 
+            margin:0;
+            font-size: 60px;
+            line-height: 68px;
+            padding-left: 15%;
+            padding-top: 15%;
+
+        }
+}
+
+
+.feature{
+padding-bottom: 3%;
+color: #323232;
+ 
+    &__top{
+      
+        
+        &--title{
+            font-family: 'Avenir-Next-Bold';
+            padding-left: 10%;
+            font-size: 36px;
+            line-height: 44px;
+        } 
+
+        &--img{
+        @include band-img-desktop;
+       
+        } 
+}
+
+ 
+     
+    &__quote{
+        font-family: 'Avenir-Next-Bold';
+        font-size: 24px;
+        line-height: 32px;
+        padding-left: 15%;
+    }
+    
+    &__sign{
+
+       font-family: 'Avenir-Next-Demi';;
+       font-size: 16px;
+       line-height: 24px;
+       padding-left: 15%;
+       padding-bottom: 1rem;
+    }
+
+  
+
+    &__article{
+
+ 
+     
+        &--title{
+            font-family:'Avenir-Next-Bold' ;
+            font-size: 24px;
+            font-weight: 32px;
+            padding-left: 15%;
+        }
+
+        &--body{
+            padding: 0 13% 0 11%;
+            
+            display: flex;
+            
+            justify-content: space-between;
+            font-family: 'Avenir-Next-Light';
+            font-size: 14px;
+            line-height: 22px;
+
+            &--text{
+                margin: 0;
+                padding-left:3rem;
+            }
+
+    
+            
+        }
+    }
+}
+
+
+
 
 .photo-gallery{
+    background-color: #fafafa;
     font-family: 'Avenir-Next-Bold';
-    color: #323232;
+    color: #323232; 
+    padding-top: 1rem;
     @include desktop{
-        margin-right: 10%;
-        margin-left: 10%;
+       
+        padding-right: 10%;
+        padding-left: 10%;
         padding-bottom: 2%;
   
     }
-
+  
     &__header{
         @include mobile{
             padding-left:  12px;
@@ -70,18 +206,12 @@
     background-color: #323232;
     color: #FAFAFA;
     position: relative;
-    margin-left:-10px;
-    margin-right:-10px;
- 
-   
-    @include tablet-padding;
-    @include desktop{
+
+   @include tablet-padding;
+   @include desktop{
         @include desktop-padding;
     } 
- 
-    @include mobile{
-   
-    }  
+  
 
 
     &__copyright{
@@ -89,7 +219,7 @@
           @include desktop{
             margin-bottom: 1rem;  
          }
-    
+     
   
     }
 
@@ -98,44 +228,64 @@
 
 }
 
-.footer__logo{
-@include tablet-logo-position;
-    @include desktop{
-        @include desktop-logo-position;
 
-    }    
 
-}
 
 .footer-heading{
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: left;
-    align-items: baseline;
-    align-content: left;
-    position: relative;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;  
+
     
-    
-    &__title{
-        font-size: 36px;
-        line-height: 32px;
-        font-family: 'Avenir-Next-Bold';
-        padding-right: 1rem;
-        padding-top: 2rem;   
+    &__left-div{
+       @include desktop{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline; 
+       }
+
+       @include tablet{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline; 
+       }
+ 
+ 
         
-    }
-   
-    &__icons{ 
-            padding-left: 40px;    
-    }
-        &__img{
+     
+
+        &--title{
+            font-size: 36px;
+            line-height: 32px;
+            font-family: 'Avenir-Next-Bold';
+            padding-right: 4rem;
+            padding-top: 2rem;
+        }
+     
+        &--img{
             height: auto;
             padding-right: 32px;
-             align-self: flex-end; 
-
+        
         } 
-    
+    }
 
+    &__logo{
+        height: 20px;
+        @include mobile{
+            display: none;
+        }
+        @include desktop{
+            display: block;       
+        }
+
+        @include tablet{
+            display: block;
+        }
+    }
 
      
 
@@ -147,12 +297,11 @@
     font-family: 'Avenir-Next-Medium';
     position: relative;
     display: flex;
-    padding-right: 20%;
+    flex-wrap: wrap;
+    
     justify-content: space-between;
-    @include tablet{
-        padding-right: 5%;
-    }
-
+ @include desktop{ padding-right: 20%;}
+   
     
     &--name{
        font-size: 16px;
