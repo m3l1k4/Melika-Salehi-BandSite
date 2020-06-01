@@ -83,7 +83,8 @@
 }
 
 a {
-  z-index: 10;
+  width: inherit;
+  height: inherit;
 }
 
 .nav-bar-link {
