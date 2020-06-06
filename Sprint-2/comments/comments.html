@@ -1,0 +1,83 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+
+<!-- non viewable is meta-->
+<meta charset="UTF-8">
+<meta title="author" content="Melika">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+</head>
+<style> 
+    textarea {
+      width: 224px;
+      height: 112px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      resize: none;
+    }
+
+
+    .comments-name{
+        width: 224px;
+    }
+
+    </style>
+
+<body>
+
+
+<main>
+
+
+    <form id="submit-comments">
+
+        <div>
+            <p for="name">NAME</p>
+            <input type="text" class="comments-name" placeholder="Enter Name" name="name"  required>
+        </div>
+        <div>
+            <p for="comment">COMMENT</p>
+            <textarea placeholder="Add a new comment" required></textarea>
+           
+          </div> 
+       <div>
+            <button type="submit" class="comment-submit-button">COMMENT</button>
+       </div> 
+
+    </form>
+
+    <div id="new-comment"></div>
+    <div class="previous-comments">
+        <h2 class="previous-comment__name">test name 1 </h2>
+        <p class="previous-comments__comment"> test comment body</p>
+        <h2 class="previous-comment__name">test name 2 </h2>
+        <p class="previous-comments__comment"> test comment body</p>
+        <h2 class="previous-comment__name">test name 3 </h2>
+        <p class="previous-comments__comment"> test comment body</p>
+
+    </div>
+
+
+
+</main>
+
+</body>
+<script src="./comments.js"></script>
+<script>
+
+
+</script>
+
+</html>
+
+
