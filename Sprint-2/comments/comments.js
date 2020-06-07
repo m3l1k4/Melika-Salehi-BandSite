@@ -1,3 +1,4 @@
+// Comments array containing the 3 default comments
 var joinTheConv = [
 
    {
@@ -20,10 +21,8 @@ var joinTheConv = [
 
 ];
 
-
+//Goes through the comments array and imports it onto the page by changing innerHTML
 function displayComment(jtc) {
-
-
 
    let nameTag = document.querySelectorAll('.previous-comment__name');
    let commentTag = document.querySelectorAll('.previous-comments__comment');
@@ -39,21 +38,23 @@ function displayComment(jtc) {
 
 displayComment(joinTheConv);
 
-
+// This function allows user to submit the comment
 document.getElementById("comment-submit-button").addEventListener("click",
    function (event) {
-      event.preventDefault();
+      event.preventDefault(); //prevents the page from reloading when submitting new comment
 
-      let nameValue = document.getElementById("comment-name").value;
-      let commentValue = document.getElementById("comment-content").value;
-      let currentTime = new Date();
-      let timeString = '';
-      timeDay= currentTime.getDate();
+      let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
+      let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
+      let currentTime = new Date(); // Gets the date string at time of submission
+      
+      //cleaning up the date string and concat into MM/DD/YYY format
+      let timeString = ''; 
+      timeDay= currentTime.getDate(); 
       timeYear=currentTime.getFullYear();
       timeMonth=currentTime.getMonth();
       let timeValue = timeString.concat(timeMonth,'/', timeDay,'/', timeYear);
      
-
+      //pushed values to the the beginning of the array so most recent comment is always on top of the page
       joinTheConv.unshift({ name: nameValue, timeStamp: timeValue,  comment: commentValue });
 
       newCommenter(nameValue, timeValue, commentValue);
@@ -61,8 +62,11 @@ document.getElementById("comment-submit-button").addEventListener("click",
    });
 
 
+
+// Creates new elements on the page so new comment object can be dispalyed
 function newCommenter(name, timeStamp,comment) {
 
+   //creating new elements and assigning class
    let tagName = document.createElement("h2");
    tagName.className = "previous-comment__name";
    let tagComment = document.createElement("p");
@@ -70,6 +74,7 @@ function newCommenter(name, timeStamp,comment) {
    let tagTime = document.createElement("p");
    tagTime.className ="previous-comments__time";
 
+   //creating textnode
    let nameText = document.createTextNode(name);
    let bodyText = document.createTextNode(comment);
    let timeText = document.createTextNode(timeStamp);
@@ -78,14 +83,10 @@ function newCommenter(name, timeStamp,comment) {
    tagComment.appendChild(bodyText);
    tagTime.appendChild(timeText);
 
-   let nameElement = document.getElementById("new-comment");
-   nameElement.appendChild(tagName);
-
-   let commentElement = document.getElementById("new-comment");
-   commentElement.appendChild(tagComment);
-
-   let timeElement =document.getElementById("new-comment");
-   timeElement.appendChild(tagTime);
+   let newElement = document.getElementById("new-comment");
+   newElement.appendChild(tagName);
+   newElement.appendChild(tagComment);
+   newElement.appendChild(tagTime);
 
 
    document.getElementById("submit-comments").reset();
