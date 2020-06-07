@@ -1,9 +1,3 @@
-
-
-
-
-
-
 var joinTheConv = [
 
    {
@@ -33,11 +27,14 @@ function displayComment(jtc) {
 
    let nameTag = document.querySelectorAll('.previous-comment__name');
    let commentTag = document.querySelectorAll('.previous-comments__comment');
+   let timeTag= document.querySelectorAll('.previous-comments__time');
    for (let i = 0; i < nameTag.length; i++) {
 
       nameTag[i].innerHTML = jtc[i].name;
       commentTag[i].innerHTML = jtc[i].comment;
-
+      timeTag[i].innerHTML = jtc[i].timeStamp;
+      console.log(jtc[i].name);
+      console.log(nameTag.length);
    }
 
 }
@@ -45,57 +42,56 @@ function displayComment(jtc) {
 displayComment(joinTheConv);
 
 
-document.getElementById("comment-submit-button").addEventListener("click", 
-function(event){ 
-event.preventDefault();
+document.getElementById("comment-submit-button").addEventListener("click",
+   function (event) {
+      event.preventDefault();
+
+      let nameValue = document.getElementById("comment-name").value;
+      let commentValue = document.getElementById("comment-content").value;
+      let timeValue = Date();
+
+      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue,  comment: commentValue });
+
+      alert(nameValue);
+      alert(commentValue);
+      alert(timeValue);
 
 
- 
-  let nameValue = document.getElementById("comment-name").value ;
-  let commentValue = document.getElementById("comment-content").value;
-  
-  joinTheConv.push({nameValue: commentValue});
-  
-  alert(nameValue);
-  alert(commentValue);
- 
-
-newCommenter(nameValue, commentValue);
-});
+      newCommenter(nameValue, timeValue, commentValue);
+      displayComment(joinTheConv);
+   });
 
 
-function newCommenter(name, comment) {
-  
+function newCommenter(name, timeStamp,comment) {
+
    let tagName = document.createElement("h2");
+   tagName.className = "previous-comment__name";
    let tagComment = document.createElement("p");
+   tagComment.className ="previous-comments__comment"
+   let tagTime = document.createElement("p");
+   tagTime.className ="previous-comments__time";
 
-   
    let nameText = document.createTextNode(name);
    let bodyText = document.createTextNode(comment);
+   let timeText = document.createTextNode(timeStamp);
 
    tagName.appendChild(nameText);
-
    tagComment.appendChild(bodyText);
+   tagTime.appendChild(timeText);
 
    let nameElement = document.getElementById("new-comment");
    nameElement.appendChild(tagName);
 
    let commentElement = document.getElementById("new-comment");
    commentElement.appendChild(tagComment);
+
+   let timeElement =document.getElementById("new-comment");
+   timeElement.appendChild(tagTime);
+
+
    document.getElementById("submit-comments").reset();
 
 }
 
-
-
-
-
-/*
-let commentName = document.querySelectorAll('#previous-comment__name');
-let commentBody = document.querySelectorAll('#previous-comments__comment');
-for (let i=0; i<commentName.length;i++){
-   alert(commentBody[i].innerHTML);
-}
-*/
 
 alert("hello");
