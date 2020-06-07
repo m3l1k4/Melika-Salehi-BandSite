@@ -33,8 +33,6 @@ function displayComment(jtc) {
       nameTag[i].innerHTML = jtc[i].name;
       commentTag[i].innerHTML = jtc[i].comment;
       timeTag[i].innerHTML = jtc[i].timeStamp;
-      console.log(jtc[i].name);
-      console.log(nameTag.length);
    }
 
 }
@@ -53,18 +51,10 @@ document.getElementById("comment-submit-button").addEventListener("click",
       timeDay= currentTime.getDate();
       timeYear=currentTime.getFullYear();
       timeMonth=currentTime.getMonth();
-      console.log(timeDay);
-      console.log(timeMonth);
-      console.log(timeYear);
       let timeValue = timeString.concat(timeMonth,'/', timeDay,'/', timeYear);
      
 
       joinTheConv.unshift({ name: nameValue, timeStamp: timeValue,  comment: commentValue });
-
-      alert(nameValue);
-      alert(commentValue);
-      alert(timeValue);
-
 
       newCommenter(nameValue, timeValue, commentValue);
       displayComment(joinTheConv);
@@ -101,6 +91,3 @@ function newCommenter(name, timeStamp,comment) {
    document.getElementById("submit-comments").reset();
 
 }
-
-
-alert("hello");
