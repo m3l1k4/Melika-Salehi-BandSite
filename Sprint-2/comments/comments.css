@@ -191,29 +191,108 @@
   border-radius: 4px;
 }
 
+.new-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: red;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.new-comment__comment {
+  padding-left: 1rem;
+}
+
 .previous-comments {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.previous-comments__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.previous-comments__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+
+.previous-comments__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.previous-comments__heading--time {
+  color: #afafaf;
+  font-family: 'Avenir-Next-light';
+}
+
+.previous-comments__heading--name {
+  color: #323232;
+  font-family: 'Avenir-Next-Medium';
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
 }
 
 .previous-comments__icon {
-  width: 60px;
-  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   background-color: silver;
-}
-
-.previous-comments__name {
-  color: #323232;
-  font-family: 'Avenir-Next-Medium';
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin: 0;
+  margin-right: 16px;
+  margin-top: 24px;
 }
 
 .previous-comments__comment {
   font-family: 'Avenir-Next-Light';
-}
-
-.previous-comments__time {
-  color: #afafaf;
-  font-family: 'Avenir-Next-light';
+  margin: 0;
 }
 /*# sourceMappingURL=comments.css.map */

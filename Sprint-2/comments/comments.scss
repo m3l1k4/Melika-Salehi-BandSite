@@ -122,42 +122,88 @@
       
         }
      
-     
-
-
-        
-
-          
-
-          
-        
-    
 
     }
     
+    .new-comment{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: red;
+        align-items: baseline;
+
+        &__comment{
+            padding-left: 1rem;
+        }
+
+    }
  
     .previous-comments{
-        
+     
+        font-size: 14px;
+        line-height: 20px;
+
+        &__box{
+            display: flex;
+            flex-direction: row;
+          
+        }
+        &__div{
+        display: flex;
+        flex-direction: row;
+ 
+        flex: 1 0 0;
+
+      }
+
+        &__heading{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:baseline;
+
+
+            &--time{
+                color: #afafaf;
+                font-family:'Avenir-Next-light';
+            }
+
+            &--name{
+                color: #323232;
+                font-family:'Avenir-Next-Medium';
+                font-size: 14px;
+                line-height: 22px;
+                margin:0;
+               
+            }
+        }
+
         &__icon{
-            width: 60px;
-            height:60px;
-            border-radius: 50%;
+            display: flex;
+            align-items: center;
+             border-radius: 50%;
+             width: 40px;
+             height: 40px;
+         
+          
             background-color: silver;
+             background-position: left;
+             background-size: cover;
+             background-repeat: no-repeat;
+             align-self: start;
+             margin:0;
+             margin-right: 16px;
+            
+             margin-top: 24px;
         }
-        font-size: 16px;
-        line-height: 24px;
-        &__name{
-            color: #323232;
-            font-family:'Avenir-Next-Medium';
-           
-        }
+  
+      
         &__comment{
             font-family:'Avenir-Next-Light';
+            margin:0;
             
 
         }
-        &__time{
-            color: #afafaf;
-            font-family:'Avenir-Next-light';
-        }
+ 
     }
