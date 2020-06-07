@@ -49,11 +49,16 @@ document.getElementById("comment-submit-button").addEventListener("click",
 function(event){ 
 event.preventDefault();
 
+
+ 
   let nameValue = document.getElementById("comment-name").value ;
   let commentValue = document.getElementById("comment-content").value;
   
+  joinTheConv.push({nameValue: commentValue});
+  
   alert(nameValue);
   alert(commentValue);
+ 
 
 newCommenter(nameValue, commentValue);
 });
@@ -77,6 +82,7 @@ function newCommenter(name, comment) {
 
    let commentElement = document.getElementById("new-comment");
    commentElement.appendChild(tagComment);
+   document.getElementById("submit-comments").reset();
 
 }
 
@@ -87,9 +93,9 @@ function newCommenter(name, comment) {
 /*
 let commentName = document.querySelectorAll('#previous-comment__name');
 let commentBody = document.querySelectorAll('#previous-comments__comment');
-
 for (let i=0; i<commentName.length;i++){
    alert(commentBody[i].innerHTML);
 }
 */
+
 alert("hello");
