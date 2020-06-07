@@ -26,23 +26,8 @@ var joinTheConv = [
 
 ];
 
-/*
-joinTheConv.forEach((item) => {
-  
-htags.innerHTML = item.name;
- 
-console.log(htags.innerHTML);
 
-}); */
-
-
-
-
-
-
-
-//document.querySelector("body").style.backgroundColor="red";
-function changeNames(jtc) {
+function displayComment(jtc) {
 
 
 
@@ -57,7 +42,21 @@ function changeNames(jtc) {
 
 }
 
-changeNames(joinTheConv);
+displayComment(joinTheConv);
+
+
+document.getElementById("comment-submit-button").addEventListener("click", 
+function(event){ 
+event.preventDefault();
+
+  let nameValue = document.getElementById("comment-name").value ;
+  let commentValue = document.getElementById("comment-content").value;
+  
+  alert(nameValue);
+  alert(commentValue);
+
+newCommenter(nameValue, commentValue);
+});
 
 
 function newCommenter(name, comment) {
@@ -79,13 +78,11 @@ function newCommenter(name, comment) {
    let commentElement = document.getElementById("new-comment");
    commentElement.appendChild(tagComment);
 
-
-
-
 }
 
 
-newCommenter('potato', 'hoohoo')
+
+
 
 /*
 let commentName = document.querySelectorAll('#previous-comment__name');
