@@ -24,7 +24,7 @@ var joinTheConv = [
 //Goes through the comments array and imports it onto the page by changing innerHTML
 function displayComment(jtc) {
 
-   let nameTag = document.querySelectorAll('.previous-comment__name');
+   let nameTag = document.querySelectorAll('.previous-comments__name');
    let commentTag = document.querySelectorAll('.previous-comments__comment');
    let timeTag= document.querySelectorAll('.previous-comments__time');
    for (let i = 0; i < nameTag.length; i++) {
@@ -67,14 +67,21 @@ document.getElementById("comment-submit-button").addEventListener("click",
 function newCommenter(name, timeStamp,comment) {
 
    //creating new elements and assigning class
+  let tagIcon=document.createElement("figure");
+  tagIcon.className="previous-comments__icon";
+  
+  
    let tagName = document.createElement("h2");
-   tagName.className = "previous-comment__name";
+   tagName.className = "previous-comments__name";
    let tagComment = document.createElement("p");
    tagComment.className ="previous-comments__comment"
    let tagTime = document.createElement("p");
    tagTime.className ="previous-comments__time";
 
    //creating textnode
+
+   let iconCont=document.createno
+
    let nameText = document.createTextNode(name);
    let bodyText = document.createTextNode(comment);
    let timeText = document.createTextNode(timeStamp);
@@ -84,9 +91,11 @@ function newCommenter(name, timeStamp,comment) {
    tagTime.appendChild(timeText);
 
    let newElement = document.getElementById("new-comment");
+   newElement.appendChild(tagIcon);
    newElement.appendChild(tagName);
    newElement.appendChild(tagComment);
    newElement.appendChild(tagTime);
+  
 
 
    document.getElementById("submit-comments").reset();

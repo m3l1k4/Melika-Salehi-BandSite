@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+* html {
+  margin: 0;
+}
+
+.comments-form-header {
+  font-family: 'Avenir-Next-Bold';
+  color: #323232;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 16px;
+  margin-bottom: 40px;
+}
+
+.comments-form {
+  background-color: #ffffff;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.comments-form__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url("assets/Images/Mohan-muruge.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin: 0;
+  margin-right: 16px;
+  margin-top: 24px;
+}
+
+.comments-form__field {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+
+.comments-form__field input:focus {
+  border: 2px solid black;
+  outline: none;
+}
+
+.comments-form__field textarea:focus {
+  border: 2px solid black;
+  outline: none;
+}
+
+.comments-form__field--title {
+  font-family: 'Avenir-Next-Demi';
+  font-size: 14px;
+  line-height: 22px;
+  color: #afafaf;
+  margin: 0;
+}
+
+.comments-form__field--name {
+  width: 224px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 20px;
+  resize: none;
+}
+
+@media (min-width: 320px) {
+  .comments-form__field--comment {
+    width: 224px;
+    height: 112px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    line-height: 20px;
+    resize: none;
+  }
+}
+
+.comments-form__field--button {
+  background-color: #323232;
+  font-family: 'Avenir-Next-Demi';
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 12px 0;
+  margin: 0;
+  border: 0px;
+  width: 224px;
+  border-radius: 4px;
+}
+
+.previous-comments {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.previous-comments__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: silver;
+}
+
+.previous-comments__name {
+  color: #323232;
+  font-family: 'Avenir-Next-Medium';
+}
+
+.previous-comments__comment {
+  font-family: 'Avenir-Next-Light';
+}
+
+.previous-comments__time {
+  color: #afafaf;
+  font-family: 'Avenir-Next-light';
+}
+/*# sourceMappingURL=comments.css.map */
