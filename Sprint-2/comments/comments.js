@@ -48,7 +48,16 @@ document.getElementById("comment-submit-button").addEventListener("click",
 
       let nameValue = document.getElementById("comment-name").value;
       let commentValue = document.getElementById("comment-content").value;
-      let timeValue = Date();
+      let currentTime = new Date();
+      let timeString = '';
+      timeDay= currentTime.getDate();
+      timeYear=currentTime.getFullYear();
+      timeMonth=currentTime.getMonth();
+      console.log(timeDay);
+      console.log(timeMonth);
+      console.log(timeYear);
+      let timeValue = timeString.concat(timeMonth,'/', timeDay,'/', timeYear);
+     
 
       joinTheConv.unshift({ name: nameValue, timeStamp: timeValue,  comment: commentValue });
 
