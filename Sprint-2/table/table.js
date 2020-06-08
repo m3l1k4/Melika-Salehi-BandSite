@@ -69,6 +69,10 @@ function createListElements(){
         let locationValue=document.createElement("p");
         locationValue.className="shows__location";
 
+        let buttonSq=document.createElement("button");
+        buttonSq.id="shows__buy-tickets";
+        buttonSq.type="button";
+        buttonSq.innerHTML="BUY TICKETS";
 
         showsDivOne.appendChild(dateTitle);
         showsDivOne.appendChild(dateValue);
@@ -76,6 +80,7 @@ function createListElements(){
         showsDivOne.appendChild(VenueValue);
         showsDivOne.appendChild(locationTitle);
         showsDivOne.appendChild(locationValue);
+        showsDivOne.appendChild(buttonSq);
 
     }
 
@@ -95,7 +100,7 @@ function importShowsArray(shows){
     let locationTitleTag=document.querySelectorAll('.shows__title--location');
     let locationValueTag=document.querySelectorAll('.shows__location');
     
-    
+
     
     for (let k=0; k<shows.length; k++){
         dateTitleTag[k].innerHTML= "Shows";
@@ -106,10 +111,9 @@ function importShowsArray(shows){
 
         locationTitleTag[k].innerHTML="Location";
         locationValueTag[k].innerHTML=shows[k].Location;
+
     
-    console.log(shows[k].Venue);
-    console.log(k);
-    console.log(venueTitleTag.innerHTML);
+  
     }
 
 
