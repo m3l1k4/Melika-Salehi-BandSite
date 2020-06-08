@@ -1,0 +1,449 @@
+
+@import "mixins.scss";
+@import "variables.scss";
+@import"fonts.scss";
+
+* html{
+    margin:0;
+}
+
+a{
+ 
+ width: inherit;
+ height: inherit;
+ text-decoration: none;
+}
+
+body{
+    margin:0;
+}
+.nav-bar-link{
+    
+    color: #FAFAFA;
+}
+.nav-bar{
+ 
+
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+   
+    background-color: #323232;
+    font-family:'Avenir-Next-Medium' ;
+
+    
+
+        @include mobile{
+            flex-direction: column;
+            padding-left:0;
+            font-size: 16px;
+            padding-top:1rem;
+        }
+
+        @include tablet{
+            padding-left:5%;
+            padding-top:2rem;
+            font-size: 16px;
+            flex-direction: row;
+        }
+
+        @include desktop{
+            padding-left:15%;
+            padding-top:2rem;
+            font-size: 16px; 
+            flex-direction: row;
+        }
+    
+   
+
+    &__list{
+       
+        margin:0;
+        padding:0;
+        @include mobile{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 1rem;
+        }
+
+    }
+
+    &__text{
+       
+        list-style-type: none;
+      
+        &--passive{
+            @include mobile{
+                padding-left: 48px;
+                padding-right: 32px ;
+            }
+
+            @include tablet{
+                padding-left:0;
+                padding-right: 0 ;
+            }
+
+            @include desktop{
+                padding-left: 0;
+                padding-right: 0 ;
+            }
+
+
+
+        }
+
+       
+        &--active{
+            border-bottom: 3px solid white;
+        
+            
+            @include mobile{
+            
+                padding-bottom: 1rem;
+                text-align: center;
+                padding-left:56px;
+                padding-right: 56px;
+                margin-right:0;
+            }
+
+            @include tablet{
+                padding-bottom: 1.5rem;
+                margin-right:4rem;
+                padding-left: 0;
+                padding-right: 0;
+
+            }
+
+            @include desktop{
+                padding-bottom: 1.5rem;
+                margin-right:4rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        
+   
+           
+        }
+
+    }
+
+    &__logo{
+   
+
+        @include mobile{
+            padding-left: 103px;
+            padding-right: 0;
+            padding-bottom: 1rem;
+        }
+
+        @include tablet{
+            padding-right: 3rem;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
+        @include desktop{
+            padding-right: 3rem;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.hero-container{
+
+    background-image: url("../assets/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 472px;
+    box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6,.5);
+ 
+        &__iframe{
+
+            margin-left: 16px;
+            font-size: 10px; 
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+            font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+            font-weight: 100;
+           
+   
+        }
+
+
+        &__title{
+            font-family:'Avenir-Next-Bold' ;
+            color: #FAFAFA; 
+            margin:0;
+            font-size: 60px;
+            line-height: 68px;
+            padding-left: 15%;
+            padding-top: 15%;
+            padding-bottom:15%;
+
+            @include mobile{
+                font-size: 36px;
+                line-height: 44px;
+                padding-top: 16px;
+                padding-left: 24px;
+                padding-bottom:15%;
+            }
+
+            @include tablet{
+                font-size: 60px;
+                line-height: 68px;
+                padding-top: 15%;
+                padding-left: 5%;
+                padding-bottom:15%;
+            }
+
+            @include desktop{
+                font-size: 60px;
+                line-height: 68px;
+                padding-left: 15%;
+                padding-top: 15%;
+                padding-bottom:15%;
+            }
+
+
+        }
+        
+    
+        &__title-small{
+            font-family:'Avenir-Next-Light' ;
+            color: #FAFAFA; 
+           margin:0;
+
+            @include mobile{
+                font-size:16px ;
+                line-height: 24px;
+                padding-left: 24px;
+                padding-top:64px;
+            }
+        }
+
+
+    }
+/*============*/
+main{
+    background-color: #fafafa;
+
+}
+
+.shows{
+
+
+    margin-left:16px;
+    margin-right:16px;
+    margin-bottom:40px;
+  
+    &__box{
+        
+        border-bottom: 1px solid #e1e1e1;
+
+    }
+
+ 
+
+  
+    &__header-title{
+        font-family:'Avenir-Next-Bold' ;
+        font-size: 36px;
+        line-height: 44px;
+        color:#323232;
+        margin-top: 32px;
+        margin-bottom: 40px;
+        
+    }
+
+    &__title{
+        font-family:'Avenir-Next-Demi' ;
+        font-size: 16px;
+        line-height: 24px;
+        color: #afafaf;
+        margin-top: 0;
+        margin-bottom:16px;
+        margin-top:40px;
+    }
+
+    &__date{
+        font-family:'Avenir-Next-Demi' ;
+        font-size: 16px;
+        line-height: 24px;
+        color: #323232;
+        margin-top:0px;
+        margin-bottom: 24px;
+       
+    }
+
+    &__info{
+        font-family:'Avenir-Next-Light' ;
+        color: #323232;
+
+    }
+
+    &__buy-tickets{
+        background-color: #323232;
+        font-family:'Avenir-Next-Demi';
+        font-size: 16px;
+        line-height: 24px;
+        color: #fafafa;
+        border:none;
+        border-radius: 4px;
+
+        width:288px;
+        padding: 16px 0;
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+    }
+    
+
+}
+
+
+
+.footer {
+    background-color: #323232;
+    color: #FAFAFA;
+    position: relative;
+
+   @include tablet-padding;
+   @include desktop{
+        @include desktop-padding;
+    } 
+  
+
+
+    &__copyright{
+        font-family: 'Avenir-Next-Medium';
+          @include desktop{
+            margin-bottom: 1rem;  
+         }
+     
+  
+    }
+
+  
+
+
+}
+
+
+
+
+.footer-heading{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;  
+
+    
+    &__left-div{
+       @include desktop{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline; 
+       }
+
+       @include tablet{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline; 
+       }
+ 
+ 
+        
+     
+
+        &--title{
+            font-size: 36px;
+            line-height: 32px;
+            font-family: 'Avenir-Next-Bold';
+            padding-right: 4rem;
+            padding-top: 2rem;
+        }
+     
+        &--img{
+            height: auto;
+            padding-right: 32px;
+        
+        } 
+    }
+
+    &__logo{
+        height: 20px;
+        @include mobile{
+            display: none;
+        }
+        @include desktop{
+            display: block;       
+        }
+
+        @include tablet{
+            display: block;
+        }
+    }
+
+     
+
+}
+
+
+
+.footer__body{
+    font-family: 'Avenir-Next-Medium';
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+ @include desktop{ padding-right: 20%;}
+   
+    
+    &--name{
+       font-size: 16px;
+        line-height: 24px;
+       
+    }
+    &--address{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &--email{
+       font-size: 14px;
+        line-height: 20px;  
+    }
+
+    
+}
+
+
+
+
+    
