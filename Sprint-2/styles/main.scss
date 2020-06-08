@@ -633,16 +633,30 @@ color: #323232;
         margin-top: 32px;
      
     }
-    @include desktop{
-      
-    }
 
     @include tablet{
 
         font-size: 36px;
         line-height: 44px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 40px;
+        margin-top: 32px;
+     
         
     }
+    @include desktop{
+        font-size: 36px;
+        line-height: 44px;
+        margin-left: 132px;
+        margin-right: 16px;
+        margin-bottom: 40px;
+        margin-top: 32px;
+     
+      
+    }
+
+    
 }
    
    
@@ -661,18 +675,24 @@ color: #323232;
         flex-direction: row;
         align-items: left;
     }
-    @include desktop{
-      
-    }
-
-    @include tablet{
+     @include tablet{
 
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-left:96px;
         
+    } 
+    
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 30%;
+      
     }
+
+  
 
       &__icon{
 
@@ -748,33 +768,33 @@ color: #323232;
                     border: 1px solid #afafaf;
                     background-color: #f8f8f8; 
                     border-radius: 4px;
-
-
-                    @include mobile{
-                     
-                    width: 224px;
                     height: 40px;
                     margin-bottom:16px;
                     font-size: 14px;
                     line-height: 20px;
                     resize: none;
+
+
+                    @include mobile{
+                     
+                    width: 224px;
+                 
                   
             
                     }
-                    @include desktop{
-                      
-                    }
-                
                     @include tablet{
 
                         width: 520px;
-                        height: 40px;
-                        margin-bottom:16px;
-                        font-size: 14px;
-                        line-height: 20px;
-                        resize: none;
                         
                     }
+                    
+                    @include desktop{
+
+                        width: 460px;
+                      
+                    }
+                
+                    
             
             
             
@@ -786,32 +806,30 @@ color: #323232;
                     box-sizing: border-box;
                     border-radius: 4px;
                     background-color: #f8f8f8;
-
-                @include mobile{
-                   
-                    width: 224px;
                     height: 112px;
-                    margin-bottom:16px;
+                 
                     
                     font-size: 14px;
                     line-height: 20px;
                     resize: none;
 
+                @include mobile{
+                    width: 224px;
+                    margin-bottom:16px;
+    
                  }
-
+                 @include tablet{
+                    width: 520px;
+                    margin-bottom:24px;
+                  
+                  }
                   @include desktop{
+                    width: 460px;
+                    margin-bottom:24px;
 
                   } 
 
-                  @include tablet{
-                    width: 520px;
-                    height: 112px;
-                    margin-bottom:16px;
-                    
-                    font-size: 14px;
-                    line-height: 20px;
-                    resize: none;
-                  }
+                 
 
             }
 
@@ -820,32 +838,35 @@ color: #323232;
                 color: #ffffff;
                 font-family:'Avenir-Next-Demi';
                 border-radius: 4px;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 12px 0;
+                border: 0px;
+
                 @include mobile{
-                    font-size: 16px;
-                    line-height: 24px;
-                    padding: 12px 0;
-                    margin:0;
-                    border: 0px;
+    
+                    margin-bottom: 32px;;
+                    margin-left: 0;
                     width: 224px;
 
                 }
 
+
+                @include tablet{
+
+                    width: 200px;
+                    margin-left:320px;
+                    margin-bottom: 24px;
+
+                }
                 @include desktop{
+                    width: 160px;
+                    margin-left:300px;
+                    margin-bottom: 24px;
 
                 }
             
-                @include tablet{
-
-                    font-size: 16px;
-                    line-height: 24px;
-                    padding: 12px 0;
-                    margin:0;
-                    border: 0px;
-                    width: 200px;
-
-                    margin-left:320px;
-
-                }
+         
                 
             }
               
@@ -865,25 +886,27 @@ color: #323232;
         margin-bottom: 40px;
 
         &__box{
-            
+            display: flex;
+            flex-direction: row;
           
             @include mobile{
-                display: flex;
-                flex-direction: row;
+               
                 margin-left: 16px; 
             }
 
-            @include desktop{
-
-            }
-
             @include tablet{
-                display: flex;
-                flex-direction: row;
+
                 margin-left: 96px;
                 margin-right: 96px;
             }
 
+            @include desktop{
+                margin-left: 360px;
+                margin-right: 320px;
+
+            }
+
+         
         }
 
 

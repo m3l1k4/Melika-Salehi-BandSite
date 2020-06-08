@@ -787,6 +787,21 @@ body {
   .comments-form-header {
     font-size: 36px;
     line-height: 44px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form-header {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 132px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    margin-top: 32px;
   }
 }
 
@@ -824,6 +839,22 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 30%;
   }
 }
 
@@ -882,27 +913,28 @@ body {
   border: 1px solid #afafaf;
   background-color: #f8f8f8;
   border-radius: 4px;
+  height: 40px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  resize: none;
 }
 
 @media (min-width: 320px) {
   .comments-form__field--name {
     width: 224px;
-    height: 40px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 20px;
-    resize: none;
   }
 }
 
 @media (min-width: 768px) {
   .comments-form__field--name {
     width: 520px;
-    height: 40px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 20px;
-    resize: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form__field--name {
+    width: 460px;
   }
 }
 
@@ -912,27 +944,30 @@ body {
           box-sizing: border-box;
   border-radius: 4px;
   background-color: #f8f8f8;
+  height: 112px;
+  font-size: 14px;
+  line-height: 20px;
+  resize: none;
 }
 
 @media (min-width: 320px) {
   .comments-form__field--comment {
     width: 224px;
-    height: 112px;
     margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 20px;
-    resize: none;
   }
 }
 
 @media (min-width: 768px) {
   .comments-form__field--comment {
     width: 520px;
-    height: 112px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 20px;
-    resize: none;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form__field--comment {
+    width: 460px;
+    margin-bottom: 24px;
   }
 }
 
@@ -941,28 +976,33 @@ body {
   color: #ffffff;
   font-family: 'Avenir-Next-Demi';
   border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 0;
+  border: 0px;
 }
 
 @media (min-width: 320px) {
   .comments-form__field--button {
-    font-size: 16px;
-    line-height: 24px;
-    padding: 12px 0;
-    margin: 0;
-    border: 0px;
+    margin-bottom: 32px;
+    margin-left: 0;
     width: 224px;
   }
 }
 
 @media (min-width: 768px) {
   .comments-form__field--button {
-    font-size: 16px;
-    line-height: 24px;
-    padding: 12px 0;
-    margin: 0;
-    border: 0px;
     width: 200px;
     margin-left: 320px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form__field--button {
+    width: 160px;
+    margin-left: 300px;
+    margin-bottom: 24px;
   }
 }
 
@@ -972,30 +1012,33 @@ body {
   margin-bottom: 40px;
 }
 
+.previous-comments__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 @media (min-width: 320px) {
   .previous-comments__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-left: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .previous-comments__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-left: 96px;
     margin-right: 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .previous-comments__box {
+    margin-left: 360px;
+    margin-right: 320px;
   }
 }
 
