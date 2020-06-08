@@ -576,7 +576,7 @@ body {
 
 @media (min-width: 768px) {
   .photo-gallery__header {
-    padding-left: 12px;
+    padding-left: 16px;
   }
 }
 
@@ -783,6 +783,13 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .comments-form-header {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
 .comments-form {
   background-color: #ffffff;
 }
@@ -801,6 +808,22 @@ body {
     -webkit-box-align: left;
         -ms-flex-align: left;
             align-items: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 96px;
   }
 }
 
@@ -872,6 +895,17 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .comments-form__field--name {
+    width: 520px;
+    height: 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    resize: none;
+  }
+}
+
 .comments-form__field--comment {
   border: 1px solid #afafaf;
   -webkit-box-sizing: border-box;
@@ -883,6 +917,17 @@ body {
 @media (min-width: 320px) {
   .comments-form__field--comment {
     width: 224px;
+    height: 112px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    resize: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__field--comment {
+    width: 520px;
     height: 112px;
     margin-bottom: 16px;
     font-size: 14px;
@@ -909,6 +954,18 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .comments-form__field--button {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 0;
+    margin: 0;
+    border: 0px;
+    width: 200px;
+    margin-left: 320px;
+  }
+}
+
 .previous-comments {
   font-size: 14px;
   line-height: 20px;
@@ -925,6 +982,20 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-left: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .previous-comments__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 96px;
+    margin-right: 96px;
   }
 }
 

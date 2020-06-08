@@ -68,7 +68,7 @@ document.getElementById("comment-submit-button").addEventListener("click",
 function newCommenter(name, timeStamp,comment) {
 
    //creating new elements and assigning class
-  let tagIcon=document.createElement("figure");
+  let tagIcon=document.createElement("div");
   tagIcon.className="previous-comments__icon";
   
   

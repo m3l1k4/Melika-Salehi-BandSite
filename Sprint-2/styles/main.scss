@@ -433,6 +433,7 @@ color: #323232;
     background-color: #fafafa;
     font-family: 'Avenir-Next-Bold';
     color: #323232; 
+    
     padding-top: 1rem;
     @include desktop{
        
@@ -449,7 +450,7 @@ color: #323232;
         } 
 
         @include tablet{
-            padding-left: 12px;
+            padding-left: 16px;
         }
     }
 
@@ -637,6 +638,9 @@ color: #323232;
     }
 
     @include tablet{
+
+        font-size: 36px;
+        line-height: 44px;
         
     }
 }
@@ -662,6 +666,11 @@ color: #323232;
     }
 
     @include tablet{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left:96px;
         
     }
 
@@ -757,6 +766,13 @@ color: #323232;
                     }
                 
                     @include tablet{
+
+                        width: 520px;
+                        height: 40px;
+                        margin-bottom:16px;
+                        font-size: 14px;
+                        line-height: 20px;
+                        resize: none;
                         
                     }
             
@@ -782,6 +798,21 @@ color: #323232;
                     resize: none;
 
                  }
+
+                  @include desktop{
+
+                  } 
+
+                  @include tablet{
+                    width: 520px;
+                    height: 112px;
+                    margin-bottom:16px;
+                    
+                    font-size: 14px;
+                    line-height: 20px;
+                    resize: none;
+                  }
+
             }
 
             &--button{
@@ -798,7 +829,23 @@ color: #323232;
                     width: 224px;
 
                 }
+
+                @include desktop{
+
+                }
             
+                @include tablet{
+
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 12px 0;
+                    margin:0;
+                    border: 0px;
+                    width: 200px;
+
+                    margin-left:320px;
+
+                }
                 
             }
               
@@ -826,6 +873,16 @@ color: #323232;
                 margin-left: 16px; 
             }
 
+            @include desktop{
+
+            }
+
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                margin-left: 96px;
+                margin-right: 96px;
+            }
 
         }
 
