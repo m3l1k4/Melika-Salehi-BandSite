@@ -13,6 +13,10 @@ a{
  height: inherit;
  text-decoration: none;
 }
+
+body{
+    margin:0;
+}
 .nav-bar-link{
     
     color: #FAFAFA;
@@ -608,3 +612,300 @@ color: #323232;
 
     
 }
+
+
+
+
+
+.comments-form-header{
+    font-family:'Avenir-Next-Bold';
+    color:#323232;
+   
+   
+    @include mobile{
+
+        font-size: 24px;
+        line-height: 32px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 40px;
+        margin-top: 32px;
+     
+    }
+    @include desktop{
+      
+    }
+
+    @include tablet{
+        
+    }
+}
+   
+   
+    .comments-form{
+    
+    background-color: #ffffff;
+   
+   
+    
+
+
+    @include mobile{
+        margin-left: 16px;
+        margin-right: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+    }
+    @include desktop{
+      
+    }
+
+    @include tablet{
+        
+    }
+
+      &__icon{
+
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-image: url("../assets/Images/Mohan-muruge.jpg");
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        align-self: start;
+        
+        @include mobile{
+            margin:0;
+            margin-right: 16px;
+            margin-top: 24px;
+
+        }
+        @include desktop{
+          
+        }
+    
+        @include tablet{
+            
+        }
+         
+         
+        
+    }
+              
+ 
+
+      
+        
+        &__field{
+            flex: 1 0 0;
+            
+            input:focus{
+                border: 2px solid black;
+                outline:none;
+            }
+
+            textarea:focus{
+                border: 2px solid black;
+                outline:none;
+            }
+
+
+            &--title{
+                font-family:'Avenir-Next-Demi';
+                color: #afafaf;
+    
+                @include mobile{
+                    font-size: 14px ;
+                    line-height: 22px;
+                    margin:0;
+        
+                }
+                @include desktop{
+                  
+                }
+            
+                @include tablet{
+                    
+                }
+           
+            }
+
+
+            &--name{
+
+                    padding:0;
+                    border: 1px solid #afafaf;
+                    background-color: #f8f8f8; 
+                    border-radius: 4px;
+
+
+                    @include mobile{
+                     
+                    width: 224px;
+                    height: 40px;
+                    margin-bottom:16px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    resize: none;
+                  
+            
+                    }
+                    @include desktop{
+                      
+                    }
+                
+                    @include tablet{
+                        
+                    }
+            
+            
+            
+                }
+
+              &--comment{
+
+                    border: 1px solid #afafaf;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    background-color: #f8f8f8;
+
+                @include mobile{
+                   
+                    width: 224px;
+                    height: 112px;
+                    margin-bottom:16px;
+                    
+                    font-size: 14px;
+                    line-height: 20px;
+                    resize: none;
+
+                 }
+            }
+
+            &--button{
+                background-color: #323232;
+                color: #ffffff;
+                font-family:'Avenir-Next-Demi';
+                border-radius: 4px;
+                @include mobile{
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 12px 0;
+                    margin:0;
+                    border: 0px;
+                    width: 224px;
+
+                }
+            
+                
+            }
+              
+    
+      
+      
+        }
+     
+
+    }
+    
+ 
+    .previous-comments{
+     
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 40px;
+
+        &__box{
+            
+          
+            @include mobile{
+                display: flex;
+                flex-direction: row;
+                margin-left: 16px; 
+            }
+
+
+        }
+
+
+
+
+        &__div{
+      
+
+            @include mobile{
+            display: flex;
+            flex-direction: row;
+            flex: 1 0 0;
+        }
+    
+    
+        }
+
+        &__heading{
+
+            @include mobile{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:baseline;
+            }
+      
+
+
+            &--time{
+                color: #afafaf;
+                font-family:'Avenir-Next-light';
+            }
+
+            &--name{
+                color: #323232;
+                font-family:'Avenir-Next-Medium';
+
+                @include mobile{
+
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin:0;
+                }
+                
+               
+            }
+        }
+
+        &__icon{ 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            background-color: silver;
+            align-self: start;
+           
+           @include mobile{
+
+            margin-right: 16px;  
+            margin-top:12px;
+            width: 40px;
+            height: 40px;
+           }
+        
+            
+         
+   
+          
+        
+            
+        }
+  
+      
+        &__comment{
+            font-family:'Avenir-Next-Light';
+            margin:0;
+            
+
+        }
+ 
+    }
+
+    
