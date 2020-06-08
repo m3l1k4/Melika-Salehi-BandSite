@@ -25,7 +25,7 @@ var joinTheConv = [
 function displayComment(jtc) {
 
    let nameTag = document.querySelectorAll('.previous-comments__heading--name ');
-   let timeTag= document.querySelectorAll('.previous-comments__heading--time');
+   let timeTag = document.querySelectorAll('.previous-comments__heading--time');
    let commentTag = document.querySelectorAll('.previous-comments__comment');
 
    for (let i = 0; i < nameTag.length; i++) {
@@ -47,16 +47,16 @@ document.getElementById("comment-submit-button").addEventListener("click",
       let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
       let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
       let currentTime = new Date(); // Gets the date string at time of submission
-      
+
       //cleaning up the date string and concat into MM/DD/YYY format
-      let timeString = ''; 
-      timeDay= currentTime.getDate(); 
-      timeYear=currentTime.getFullYear();
-      timeMonth=currentTime.getMonth();
-      let timeValue = timeString.concat(timeMonth,'/', timeDay,'/', timeYear);
-     
+      let timeString = '';
+      timeDay = currentTime.getDate();
+      timeYear = currentTime.getFullYear();
+      timeMonth = currentTime.getMonth();
+      let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
+
       //pushed values to the the beginning of the array so most recent comment is always on top of the page
-      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue,  comment: commentValue });
+      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
 
       newCommenter(nameValue, timeValue, commentValue);
       displayComment(joinTheConv);
@@ -65,48 +65,45 @@ document.getElementById("comment-submit-button").addEventListener("click",
 
 
 // Creates new elements on the page so new comment object can be dispalyed
-function newCommenter(name, timeStamp,comment) {
+function newCommenter(name, timeStamp, comment) {
 
    //creating new elements and assigning class
-  let tagIcon=document.createElement("div");
-  tagIcon.className="previous-comments__icon";
-  
-  
+   let tagIcon = document.createElement("div");
+   tagIcon.className = "previous-comments__icon";
+
+
    let tagName = document.createElement("h2");
    tagName.className = "previous-comments__heading--name ";
    let tagTime = document.createElement("p");
-   tagTime.className ="previous-comments__heading--time";
+   tagTime.className = "previous-comments__heading--time";
    let tagComment = document.createElement("p");
-   tagComment.className ="previous-comments__comment"
-   
+   tagComment.className = "previous-comments__comment"
+
 
    //creating textnode
-
-
-
    let nameText = document.createTextNode(name);
    let bodyText = document.createTextNode(comment);
    let timeText = document.createTextNode(timeStamp);
-
+   //appending
    tagName.appendChild(nameText);
    tagComment.appendChild(bodyText);
    tagTime.appendChild(timeText);
 
-//-----
-   let divElementOne= document.createElement("div");
-   divElementOne.className="previous-comments__box";
+   //creating div elements
+   let divElementOne = document.createElement("div");
+   divElementOne.className = "previous-comments__box";
 
-   let divElementTwo=document.createElement("div");
-   divElementTwo.className="previous-comments__div";
+   let divElementTwo = document.createElement("div");
+   divElementTwo.className = "previous-comments__div";
 
    let divElementThree = document.createElement("div");
 
-   let divElementFour= document.createElement("div");
-   divElementFour.className="previous-comments__heading"
-   //------
+   let divElementFour = document.createElement("div");
+   divElementFour.className = "previous-comments__heading"
+  
 
    let newElement = document.getElementById("comments");
-
+   //nesting elements
    newElement.appendChild(divElementOne);
    divElementOne.appendChild(tagIcon);
    divElementOne.appendChild(divElementTwo);
@@ -115,7 +112,8 @@ function newCommenter(name, timeStamp,comment) {
    divElementFour.appendChild(tagName);
    divElementFour.appendChild(tagTime);
    divElementThree.appendChild(tagComment);
-   
+
+   //reseting form upon reset
    document.getElementById("submit-comments").reset();
 
 }
