@@ -1,163 +1,136 @@
-
 @import "mixins.scss";
 @import "variables.scss";
-@import"fonts.scss";
+@import "fonts.scss";
 
-* html{
-    margin:0;
+* html {
+    margin: 0;
 }
 
-a{
- 
- width: inherit;
- height: inherit;
- text-decoration: none;
+a {
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
 }
-.nav-bar-link{
-    
-    color: #FAFAFA;
+.nav-bar-link {
+    color: #fafafa;
 }
-.nav-bar{
- 
-
+.nav-bar {
     display: flex;
     justify-content: left;
     align-items: baseline;
-   
+
     background-color: #323232;
-    font-family:'Avenir-Next-Medium' ;
+    font-family: "Avenir-Next-Medium";
 
-    
+    @include mobile {
+        flex-direction: column;
+        padding-left: 0;
+        font-size: 16px;
+        padding-top: 1rem;
+    }
 
-        @include mobile{
-            flex-direction: column;
-            padding-left:0;
-            font-size: 16px;
-            padding-top:1rem;
-        }
+    @include tablet {
+        padding-left: 5%;
+        padding-top: 2rem;
+        font-size: 16px;
+        flex-direction: row;
+    }
 
-        @include tablet{
-            padding-left:5%;
-            padding-top:2rem;
-            font-size: 16px;
-            flex-direction: row;
-        }
+    @include desktop {
+        padding-left: 15%;
+        padding-top: 2rem;
+        font-size: 16px;
+        flex-direction: row;
+    }
 
-        @include desktop{
-            padding-left:15%;
-            padding-top:2rem;
-            font-size: 16px; 
-            flex-direction: row;
-        }
-    
-   
-
-    &__list{
-       
-        margin:0;
-        padding:0;
-        @include mobile{
+    &__list {
+        margin: 0;
+        padding: 0;
+        @include mobile {
             display: flex;
             flex-direction: row;
             justify-content: center;
-           
-
         }
 
-        @include tablet{
+        @include tablet {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
 
-        @include desktop{
+        @include desktop {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-left: 1rem;
         }
-
     }
 
-    &__text{
-       
+    &__text {
         list-style-type: none;
-      
-        &--passive{
-            @include mobile{
+
+        &--passive {
+            @include mobile {
                 padding-left: 48px;
-                padding-right: 32px ;
+                padding-right: 32px;
             }
 
-            @include tablet{
-                padding-left:0;
-                padding-right: 0 ;
-            }
-
-            @include desktop{
+            @include tablet {
                 padding-left: 0;
-                padding-right: 0 ;
+                padding-right: 56px;
             }
 
-
-
+            @include desktop {
+                padding-left: 0;
+                padding-right: 56px;
+            }
         }
 
-       
-        &--active{
+        &--active {
             border-bottom: 3px solid white;
-        
-            
-            @include mobile{
-            
+
+            @include mobile {
                 padding-bottom: 1rem;
                 text-align: center;
-                padding-left:56px;
+                padding-left: 56px;
                 padding-right: 56px;
-                margin-right:0;
+                margin-right: 0;
             }
 
-            @include tablet{
+            @include tablet {
                 padding-bottom: 1.5rem;
-                margin-right:4rem;
-                padding-left: 0;
-                padding-right: 0;
-
-            }
-
-            @include desktop{
-                padding-bottom: 1.5rem;
-                margin-right:4rem;
+                margin-right: 4rem;
                 padding-left: 0;
                 padding-right: 0;
             }
-        
-   
-           
+
+            @include desktop {
+                padding-bottom: 1.5rem;
+                margin-right: 4rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
-
     }
 
-    &__logo{
-   
-
-        @include mobile{
+    &__logo {
+        @include mobile {
             padding-left: 103px;
             padding-right: 0;
             padding-bottom: 1rem;
         }
 
-        @include tablet{
-            padding-right: 3rem;
+        @include tablet {
+            padding-right: 56px;
             padding-left: 0;
             padding-bottom: 0;
         }
 
-        @include desktop{
+        @include desktop {
             padding-right: 3rem;
             padding-left: 0;
             padding-bottom: 0;
@@ -165,285 +138,333 @@ body{
     }
 }
 
-.hero-container{
-
+.hero-container {
     background-image: url("../assets/images/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 472px;
-    box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6,.5);
- 
-        &__iframe{
 
+    box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6, 0.5);
+
+    @include mobile {
+        height: 472px;
+    }
+    @include tablet {
+        height: 670px;
+    }
+
+    @include desktop {
+        height: 670px;
+    }
+
+    &__iframe {
+        font-size: 10px;
+        color: #cccccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+        font-weight: 100;
+
+        @include mobile {
             margin-left: 16px;
-            font-size: 10px; 
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis; 
-            font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-            font-weight: 100;
-           
-   
+            width: 296px;
+            height: 100px;
+            margin-top: 0;
         }
 
+        @include tablet {
+            margin-left: 24px;
+            width: 430px;
+            height: 180px;
+            margin-top: 0;
+        }
 
-        &__title{
-            font-family:'Avenir-Next-Bold' ;
-            color: #FAFAFA; 
-            margin:0;
+        @include desktop {
+            margin-left: 60%;
+            margin-top: 2%;
+            width: 430px;
+            height: 140px;
+        }
+    }
+
+    &__title {
+        font-family: "Avenir-Next-Bold";
+        color: #fafafa;
+        margin: 0;
+        font-size: 60px;
+        line-height: 68px;
+        padding-left: 15%;
+        padding-top: 15%;
+        padding-bottom: 15%;
+
+        @include mobile {
+            font-size: 36px;
+            line-height: 44px;
+            padding-top: 16px;
+            padding-left: 24px;
+            padding-bottom: 15%;
+            padding-right: 0;
+        }
+
+        @include tablet {
+            font-size: 60px;
+            line-height: 68px;
+            padding-top: 24px;
+            padding-left: 24px;
+            padding-bottom: 44px;
+            padding-right: 20%;
+        }
+
+        @include desktop {
             font-size: 60px;
             line-height: 68px;
             padding-left: 15%;
-            padding-top: 15%;
-            padding-bottom:15%;
-
-            @include mobile{
-                font-size: 36px;
-                line-height: 44px;
-                padding-top: 16px;
-                padding-left: 24px;
-                padding-bottom:15%;
-            }
-
-            @include tablet{
-                font-size: 60px;
-                line-height: 68px;
-                padding-top: 15%;
-                padding-left: 5%;
-                padding-bottom:15%;
-            }
-
-            @include desktop{
-                font-size: 60px;
-                line-height: 68px;
-                padding-left: 15%;
-                padding-top: 15%;
-                padding-bottom:15%;
-            }
-
-
+            padding-top: 44px;
+            padding-bottom: 0;
+            padding-right: 35%;
         }
-        
-    
-        &__title-small{
-            font-family:'Avenir-Next-Light' ;
-            color: #FAFAFA; 
-           margin:0;
-
-            @include mobile{
-                font-size:16px ;
-                line-height: 24px;
-                padding-left: 24px;
-                padding-top:64px;
-            }
-        }
-
-
     }
-/*============*/
-main{
-    background-color: #fafafa;
 
+    &__title-small {
+        font-family: "Avenir-Next-Light";
+        color: #fafafa;
+        margin: 0;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+            padding-left: 24px;
+            padding-top: 64px;
+        }
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 24px;
+            padding-left: 24px;
+            padding-top: 96px;
+        }
+
+        @include desktop {
+            font-size: 24px;
+            line-height: 32px;
+            padding-left: 180px;
+            padding-top: 160px;
+        }
+    }
+}
+/*============*/
+main {
+    background-color: #fafafa;
 }
 
-.shows{
+.shows {
+    @include mobile {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 40px;
+    }
 
+    @include tablet {
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 40px;
+    }
 
-    margin-left:16px;
-    margin-right:16px;
-    margin-bottom:40px;
-  
-    &__box{
-        
+    @include desktop {
+        margin-left: 180px;
+        margin-right: 180px;
+        margin-bottom: 40px;
+    }
+
+    &__box {
         border-bottom: 1px solid #e1e1e1;
 
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
- 
-
-  
-    &__header-title{
-        font-family:'Avenir-Next-Bold' ;
+    &__header-title {
+        font-family: "Avenir-Next-Bold";
         font-size: 36px;
         line-height: 44px;
-        color:#323232;
-        margin-top: 32px;
-        margin-bottom: 40px;
-        
+        color: #323232;
+
+        @include mobile {
+            padding-top: 32px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        @include desktop {
+            padding-top: 48px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
     }
 
-    &__title{
-        font-family:'Avenir-Next-Demi' ;
+    &__title {
+        font-family: "Avenir-Next-Demi";
         font-size: 16px;
         line-height: 24px;
         color: #afafaf;
         margin-top: 0;
-        margin-bottom:16px;
-        margin-top:40px;
+        @include mobile {
+            margin-bottom: 16px;
+            margin-top: 40px;
+        }
+
+        @include tablet {
+            display: none;
+        }
     }
 
-    &__date{
-        font-family:'Avenir-Next-Demi' ;
+    &__info {
+        @include mobile {
+            font-family: "Avenir-Next-Light";
+        }
+
+        color: #323232;
+    }
+
+    &__date {
+        color: #323232;
+        font-family: "Avenir-Next-Demi";
         font-size: 16px;
         line-height: 24px;
-        color: #323232;
-        margin-top:0px;
-        margin-bottom: 24px;
-       
+
+        @include mobile {
+            margin-top: 0px;
+            margin-bottom: 24px;
+        }
+
+        @include tablet {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
     }
 
-    &__info{
-        font-family:'Avenir-Next-Light' ;
-        color: #323232;
-
-    }
-
-    &__buy-tickets{
+    &__buy-tickets {
         background-color: #323232;
-        font-family:'Avenir-Next-Demi';
+        font-family: "Avenir-Next-Demi";
         font-size: 16px;
         line-height: 24px;
         color: #fafafa;
-        border:none;
+        border: none;
         border-radius: 4px;
 
-        width:288px;
-        padding: 16px 0;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        @include mobile {
+            width: 288px;
+            padding: 16px 0;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
 
+        @include tablet {
+            width: 200px;
+            padding: 16px 0;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
     }
-    
-
 }
-
-
 
 .footer {
     background-color: #323232;
-    color: #FAFAFA;
+    color: #fafafa;
     position: relative;
 
-   @include tablet-padding;
-   @include desktop{
+    @include tablet-padding;
+    @include desktop {
         @include desktop-padding;
-    } 
-  
-
-
-    &__copyright{
-        font-family: 'Avenir-Next-Medium';
-          @include desktop{
-            margin-bottom: 1rem;  
-         }
-     
-  
     }
 
-  
-
-
+    &__copyright {
+        font-family: "Avenir-Next-Medium";
+        @include desktop {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
-
-
-
-.footer-heading{
-
+.footer-heading {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; 
-    position: relative;  
+    align-items: center;
+    position: relative;
 
-    
-    &__left-div{
-       @include desktop{
-        display: flex;
-        flex-direction: row;
-        align-items: baseline; 
-       }
+    &__left-div {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
 
-       @include tablet{
-        display: flex;
-        flex-direction: row;
-        align-items: baseline; 
-       }
- 
- 
-        
-     
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
 
-        &--title{
+        &--title {
             font-size: 36px;
             line-height: 32px;
-            font-family: 'Avenir-Next-Bold';
+            font-family: "Avenir-Next-Bold";
             padding-right: 4rem;
             padding-top: 2rem;
         }
-     
-        &--img{
+
+        &--img {
             height: auto;
             padding-right: 32px;
-        
-        } 
+        }
     }
 
-    &__logo{
+    &__logo {
         height: 20px;
-        @include mobile{
+        @include mobile {
             display: none;
         }
-        @include desktop{
-            display: block;       
+        @include desktop {
+            display: block;
         }
 
-        @include tablet{
+        @include tablet {
             display: block;
         }
     }
-
-     
-
 }
 
-
-
-.footer__body{
-    font-family: 'Avenir-Next-Medium';
+.footer__body {
+    font-family: "Avenir-Next-Medium";
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    
+
     justify-content: space-between;
- @include desktop{ padding-right: 20%;}
-   
-    
-    &--name{
-       font-size: 16px;
-        line-height: 24px;
-       
+    @include desktop {
+        padding-right: 20%;
     }
-    &--address{
+
+    &--name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &--address {
         font-size: 14px;
         line-height: 20px;
     }
 
-    &--email{
-       font-size: 14px;
-        line-height: 20px;  
+    &--email {
+        font-size: 14px;
+        line-height: 20px;
     }
-
-    
 }
-
-
-
-
-    
