@@ -1,3 +1,4 @@
+//array of show info
 var showsList = [
 
     {
@@ -42,7 +43,7 @@ var showsList = [
 
 
 
-
+//creates element needed to import the array values
 function createListElements(){
 
 
@@ -91,6 +92,7 @@ function createListElements(){
 
 createListElements();
 
+//iterates and imports array values into elements
 function importShowsArray(shows){
 
     let dateTitleTag=document.querySelectorAll('.shows__title--date');
