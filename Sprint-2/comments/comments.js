@@ -93,18 +93,29 @@ function newCommenter(name, timeStamp,comment) {
    tagTime.appendChild(timeText);
 
 //-----
+   let divElementOne= document.createElement("div");
+   divElementOne.className="previous-comments__box";
 
+   let divElementTwo=document.createElement("div");
+   divElementTwo.className="previous-comments__div";
 
-//-----
-   let newElement = document.getElementById("new-comment");
-   newElement.appendChild(tagIcon);
-   newElement.appendChild(tagName);
-   newElement.appendChild(tagTime);
-   newElement.appendChild(tagComment);
-  
+   let divElementThree = document.createElement("div");
 
+   let divElementFour= document.createElement("div");
+   divElementFour.className="previous-comments__heading"
+   //------
 
+   let newElement = document.getElementById("comments");
 
+   newElement.appendChild(divElementOne);
+   divElementOne.appendChild(tagIcon);
+   divElementOne.appendChild(divElementTwo);
+   divElementTwo.appendChild(divElementThree);
+   divElementThree.appendChild(divElementFour);
+   divElementFour.appendChild(tagName);
+   divElementFour.appendChild(tagTime);
+   divElementThree.appendChild(tagComment);
+   
    document.getElementById("submit-comments").reset();
 
 }
