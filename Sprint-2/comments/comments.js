@@ -82,7 +82,7 @@ function newCommenter(name, timeStamp,comment) {
 
    //creating textnode
 
-   let iconCont=document.createno
+ 
 
    let nameText = document.createTextNode(name);
    let bodyText = document.createTextNode(comment);
