@@ -48,11 +48,30 @@ function epoch2Human(timeStampString){
 
 
 
+document.getElementById("comment-submit-button").addEventListener("click",
+   function (event) {
+      event.preventDefault(); //prevents the page from reloading when submitting new comment
+
+      let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
+      let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
+      let currentTime = new Date(); // Gets the date string at time of submission
+
+      //cleaning up the date string and concat into MM/DD/YYY format
+      let timeValue = epoch2Human(currentTime);
+
+      //pushed values to the the beginning of the array so most recent comment is always on top of the page
+      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
+
+      newCommenter(nameValue, timeValue, commentValue);
+      displayComment(joinTheConv);
+   });
+
 
 postInfo = () => {
     axios.post("https://project-1-api.herokuapp.com/comments?api_key="+api_key,
     {name: 'potato',
-    comment: 'hahaha'
+    comment: 'hahaha',
+    timestamp:'1205209821'
     })
         .then(response => {
           
