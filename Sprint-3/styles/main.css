@@ -93,7 +93,7 @@ body {
 }
 
 .nav-bar-link {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .nav-bar {
@@ -107,7 +107,7 @@ body {
       -ms-flex-align: baseline;
           align-items: baseline;
   background-color: #323232;
-  font-family: 'Avenir-Next-Medium';
+  font-family: "Avenir-Next-Medium";
 }
 
 @media (min-width: 320px) {
@@ -290,8 +290,8 @@ body {
 }
 
 .hero-container__title {
-  font-family: 'Avenir-Next-Bold';
-  color: #FAFAFA;
+  font-family: "Avenir-Next-Bold";
+  color: #fafafa;
   margin: 0;
   font-size: 60px;
   line-height: 68px;
@@ -336,7 +336,7 @@ body {
 }
 
 .feature__top--title {
-  font-family: 'Avenir-Next-Bold';
+  font-family: "Avenir-Next-Bold";
   padding-left: 15%;
   font-size: 36px;
   line-height: 44px;
@@ -391,7 +391,7 @@ body {
 }
 
 .feature__quote {
-  font-family: 'Avenir-Next-Bold';
+  font-family: "Avenir-Next-Bold";
 }
 
 @media (min-width: 320px) {
@@ -400,7 +400,7 @@ body {
     padding-right: 1%;
     font-size: 16px;
     line-height: 24px;
-    font-family: 'Avenir-Next-Demi';
+    font-family: "Avenir-Next-Demi";
   }
 }
 
@@ -423,7 +423,7 @@ body {
 }
 
 .feature__sign {
-  font-family: 'Avenir-Next-Demi';
+  font-family: "Avenir-Next-Demi";
   font-size: 16px;
   line-height: 24px;
   padding-bottom: 1rem;
@@ -451,7 +451,7 @@ body {
   .feature__article--title {
     padding-left: 3%;
     font-size: 16px;
-    font-family: 'Avenir-Next-Demi';
+    font-family: "Avenir-Next-Demi";
     font-weight: 24px;
   }
 }
@@ -459,7 +459,7 @@ body {
 @media (min-width: 768px) {
   .feature__article--title {
     padding-left: 3%;
-    font-family: 'Avenir-Next-Bold';
+    font-family: "Avenir-Next-Bold";
     font-size: 24px;
     font-weight: 32px;
   }
@@ -468,7 +468,7 @@ body {
 @media (min-width: 1200px) {
   .feature__article--title {
     padding-left: 15%;
-    font-family: 'Avenir-Next-Bold';
+    font-family: "Avenir-Next-Bold";
     font-size: 24px;
     font-weight: 32px;
   }
@@ -481,7 +481,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: 'Avenir-Next-Light';
+  font-family: "Avenir-Next-Light";
   font-size: 14px;
   line-height: 22px;
 }
@@ -555,7 +555,7 @@ body {
 
 .photo-gallery {
   background-color: #fafafa;
-  font-family: 'Avenir-Next-Bold';
+  font-family: "Avenir-Next-Bold";
   color: #323232;
   padding-top: 1rem;
 }
@@ -624,7 +624,7 @@ body {
 /*============*/
 .footer {
   background-color: #323232;
-  color: #FAFAFA;
+  color: #fafafa;
   position: relative;
   padding-right: 3%;
   padding-left: 3%;
@@ -640,7 +640,7 @@ body {
 }
 
 .footer__copyright {
-  font-family: 'Avenir-Next-Medium';
+  font-family: "Avenir-Next-Medium";
 }
 
 @media (min-width: 1200px) {
@@ -701,7 +701,7 @@ body {
 .footer-heading__left-div--title {
   font-size: 36px;
   line-height: 32px;
-  font-family: 'Avenir-Next-Bold';
+  font-family: "Avenir-Next-Bold";
   padding-right: 4rem;
   padding-top: 2rem;
 }
@@ -734,7 +734,7 @@ body {
 }
 
 .footer__body {
-  font-family: 'Avenir-Next-Medium';
+  font-family: "Avenir-Next-Medium";
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -768,7 +768,7 @@ body {
 }
 
 .comments-form-header {
-  font-family: 'Avenir-Next-Bold';
+  font-family: "Avenir-Next-Bold";
   color: #323232;
 }
 
@@ -839,6 +839,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 96px;
+    margin-right: 96px;
   }
 }
 
@@ -854,7 +855,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 30%;
+    margin-left: 336px;
+    margin-right: 336px;
   }
 }
 
@@ -883,6 +885,13 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .comments-form__field input:focus {
@@ -896,7 +905,7 @@ body {
 }
 
 .comments-form__field--title {
-  font-family: 'Avenir-Next-Demi';
+  font-family: "Avenir-Next-Demi";
   color: #afafaf;
 }
 
@@ -974,7 +983,7 @@ body {
 .comments-form__field--button {
   background-color: #323232;
   color: #ffffff;
-  font-family: 'Avenir-Next-Demi';
+  font-family: "Avenir-Next-Demi";
   border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
@@ -1010,6 +1019,34 @@ body {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  border-bottom: solid 1px #e1e1e1;
+}
+
+@media (min-width: 320px) {
+  .previous-comments {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .previous-comments {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .previous-comments {
+    margin-left: 360px;
+    margin-right: 320px;
+  }
 }
 
 .previous-comments__box {
@@ -1020,26 +1057,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-@media (min-width: 320px) {
-  .previous-comments__box {
-    margin-left: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  .previous-comments__box {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .previous-comments__box {
-    margin-left: 360px;
-    margin-right: 320px;
-  }
+  border-top: solid 1px #e1e1e1;
+  padding-bottom: 24px;
 }
 
 @media (min-width: 320px) {
@@ -1072,17 +1091,33 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    width: 232px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .previous-comments__heading {
+    width: 504px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .previous-comments__heading {
+    width: 448px;
+    height: auto;
   }
 }
 
 .previous-comments__heading--time {
   color: #afafaf;
-  font-family: 'Avenir-Next-light';
+  font-family: "Avenir-Next-light";
 }
 
 .previous-comments__heading--name {
   color: #323232;
-  font-family: 'Avenir-Next-Medium';
+  font-family: "Avenir-Next-Medium";
 }
 
 @media (min-width: 320px) {
@@ -1116,7 +1151,7 @@ body {
 }
 
 .previous-comments__comment {
-  font-family: 'Avenir-Next-Light';
+  font-family: "Avenir-Next-Light";
   margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
