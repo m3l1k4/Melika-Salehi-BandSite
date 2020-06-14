@@ -1,14 +1,12 @@
-
 @import "mixins.scss";
 @import "variables.scss";
 @import "fonts.scss";
 
-  * html{
-      margin:0;
-  }
+* html {
+    margin: 0;
+}
 
-
-  .comments-form-header {
+.comments-form-header {
     font-family: "Avenir-Next-Bold";
     color: #323232;
 
@@ -235,6 +233,17 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
+            width: 232px;
+            height: auto;
+        }
+        @include tablet {
+            width: 504px;
+            height: auto;
+        }
+
+        @include desktop {
+            width: 448px;
+            height: auto;
         }
 
         &--time {

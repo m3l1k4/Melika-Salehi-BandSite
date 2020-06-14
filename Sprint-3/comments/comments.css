@@ -394,6 +394,22 @@
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    width: 232px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .previous-comments__heading {
+    width: 504px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .previous-comments__heading {
+    width: 448px;
+    height: auto;
   }
 }
 
