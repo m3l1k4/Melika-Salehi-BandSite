@@ -199,6 +199,8 @@
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
 
     &__box {
         display: flex;
