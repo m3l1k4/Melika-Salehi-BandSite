@@ -387,47 +387,82 @@ body {
     background-color: #fafafa;
     font-family: "Avenir-Next-Bold";
     color: #323232;
+    
+    padding-bottom: 40px;
 
-    padding-top: 1rem;
-    @include desktop {
-        padding-right: 10%;
-        padding-left: 10%;
-        padding-bottom: 2%;
+    @include mobile{
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-top: 40px;
+
+    }
+    @include tablet{
+        padding-right: 0;
+        padding-left: 24px;
+        padding-top: 48px;
     }
 
+    
+    @include desktop {
+        padding-right: 11%;
+        padding-left: 11%;
+        padding-top: 48px;
+    }
+
+
     &__header {
+        margin:0;
         @include mobile {
-            padding-left: 12px;
+            font-size: 12px;
+            line-height: 20px;
+            padding-bottom: 8px;
+        
+            
         }
 
         @include tablet {
-            padding-left: 16px;
+
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 46px;
+ 
         }
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 46px;
+           
+        }
+
+
+        
     }
 }
 
 .photo-gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+   // flex-direction: row;
     justify-content: space-evenly;
+    align-self: center;
 
     &__img {
         @include mobile {
             width: 288px;
             height: 162px;
-            padding: 16px 24px;
+            padding: 0 0 16px 0;
         }
 
         @include tablet {
             width: 224px;
             height: 126px;
-            padding: 12px 8px;
+            padding: 12px 24px  12px 0px;
         }
         @include desktop {
             width: 287px;
             height: 161px;
-            padding: 12px 12px;
+            padding: 12px 24px  12px 0px;
             flex-basis: 30%;
         }
     }

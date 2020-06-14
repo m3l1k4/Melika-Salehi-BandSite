@@ -601,26 +601,58 @@ body {
   background-color: #fafafa;
   font-family: "Avenir-Next-Bold";
   color: #323232;
-  padding-top: 1rem;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 320px) {
+  .photo-gallery {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .photo-gallery {
+    padding-right: 0;
+    padding-left: 24px;
+    padding-top: 48px;
+  }
 }
 
 @media (min-width: 1200px) {
   .photo-gallery {
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-bottom: 2%;
+    padding-right: 11%;
+    padding-left: 11%;
+    padding-top: 48px;
   }
+}
+
+.photo-gallery__header {
+  margin: 0;
 }
 
 @media (min-width: 320px) {
   .photo-gallery__header {
-    padding-left: 12px;
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 8px;
   }
 }
 
 @media (min-width: 768px) {
   .photo-gallery__header {
-    padding-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 46px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-gallery__header {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 46px;
   }
 }
 
@@ -630,20 +662,18 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 @media (min-width: 320px) {
   .photo-gallery-grid__img {
     width: 288px;
     height: 162px;
-    padding: 16px 24px;
+    padding: 0 0 16px 0;
   }
 }
 
@@ -651,7 +681,7 @@ body {
   .photo-gallery-grid__img {
     width: 224px;
     height: 126px;
-    padding: 12px 8px;
+    padding: 12px 24px  12px 0px;
   }
 }
 
@@ -659,7 +689,7 @@ body {
   .photo-gallery-grid__img {
     width: 287px;
     height: 161px;
-    padding: 12px 12px;
+    padding: 12px 24px  12px 0px;
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
