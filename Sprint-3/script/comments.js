@@ -1,119 +1,154 @@
-// Comments array containing the 3 default comments
-var joinTheConv = [
+let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
-   {
-      name: ' Micheal Lyons',
-      timeStamp: '12/18/2018',
-      comment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
-   },
 
-   {
-      name: 'Gary Wong ',
-      timeStamp: '12/12/2018',
-      comment: 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!'
-   },
+getInfo = () => {
+    axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
+        .then(response => {
+            //  console.log(response);
+            console.log(response.data[2].name);
+            console.log("this is get axios");
+            insertComments(response);
+            console.log(response.data.length);
 
-   {
-      name: 'Theodore Duncan ',
-      timeStamp: '11/15/2018',
-      comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
-   },
+        })
+};
 
-];
+getInfo();
 
-//Goes through the comments array and imports it onto the page by changing innerHTML
-function displayComment(jtc) {
 
-   let nameTag = document.querySelectorAll('.previous-comments__heading--name ');
-   let timeTag = document.querySelectorAll('.previous-comments__heading--time');
-   let commentTag = document.querySelectorAll('.previous-comments__comment');
+function insertComments(commentsResult) {
 
-   for (let i = 0; i < nameTag.length; i++) {
+    for (let i = 0; i < commentsResult.data.length; i++) {
+        console.log(commentsResult.data.length);
 
-      nameTag[i].innerHTML = jtc[i].name;
-      commentTag[i].innerHTML = jtc[i].comment;
-      timeTag[i].innerHTML = jtc[i].timeStamp;
-   }
+        let nameVal = commentsResult.data[i].name;
+        let commentVal = commentsResult.data[i].comment;
+        let timeVal = epoch2Human(commentsResult.data[i].timestamp);
 
+        newCommenter(nameVal, timeVal, commentVal)
+    }
+    console.log("this is insert");
 }
 
-displayComment(joinTheConv);
 
-// This function allows user to submit the comment
+function epoch2Human(timeStampString) {
+    currentTime = new Date(timeStampString);
+    let timeString = '';
+    timeDay = currentTime.getDate();
+    timeYear = currentTime.getFullYear();
+    timeMonth = currentTime.getMonth();
+    let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
+
+    return timeValue;
+}
+
+function getCurrentTime() {
+
+    let currentTime = new Date(); // Gets the date string at time of submission
+
+    //cleaning up the date string and concat into MM/DD/YYY format
+    let timeString = '';
+    timeDay = currentTime.getDate();
+    timeYear = currentTime.getFullYear();
+    timeMonth = currentTime.getMonth();
+    let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
+
+    return timeValue;
+}
+
+
 document.getElementById("comment-submit-button").addEventListener("click",
-   function (event) {
-      event.preventDefault(); //prevents the page from reloading when submitting new comment
+    function (event) {
+        event.preventDefault(); //prevents the page from reloading when submitting new comment
 
-      let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
-      let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
-      let currentTime = new Date(); // Gets the date string at time of submission
+        let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
+        let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
+        let currentTime = new Date(); // Gets the date string at time of submission
+        //cleaning up the date string and concat into MM/DD/YYY format
+        let timeValue = epoch2Human(currentTime);
+        postInfo(nameValue, commentValue);
+        //pushed values to the the beginning of the array so most recent comment is always on top of the page
+        // joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
 
-      //cleaning up the date string and concat into MM/DD/YYY format
-      let timeString = '';
-      timeDay = currentTime.getDate();
-      timeYear = currentTime.getFullYear();
-      timeMonth = currentTime.getMonth();
-      let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
-
-      //pushed values to the the beginning of the array so most recent comment is always on top of the page
-      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
-
-      newCommenter(nameValue, timeValue, commentValue);
-      displayComment(joinTheConv);
-   });
+        newCommenter(nameValue, timeValue, commentValue);
+        // displayComment(joinTheConv);
+    });
 
 
+postInfo = (nameVal, commentVal) => {
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=" + api_key,
+        {
+            name: nameVal,
+            comment: commentVal
+        })
+        .then(response => {
 
-// Creates new elements on the page so new comment object can be dispalyed
+            console.log(response);
+            console.log("this is post axios");
+            console.log(response.data.name)
+
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+};
+
+postInfo();
+
+
 function newCommenter(name, timeStamp, comment) {
 
-   //creating new elements and assigning class
-   let tagIcon = document.createElement("div");
-   tagIcon.className = "previous-comments__icon";
+    //creating new elements and assigning class
+    let tagIcon = document.createElement("div");
+    tagIcon.className = "previous-comments__icon";
 
 
-   let tagName = document.createElement("h2");
-   tagName.className = "previous-comments__heading--name ";
-   let tagTime = document.createElement("p");
-   tagTime.className = "previous-comments__heading--time";
-   let tagComment = document.createElement("p");
-   tagComment.className = "previous-comments__comment"
+    let tagName = document.createElement("h2");
+    tagName.className = "previous-comments__heading--name ";
+    let tagTime = document.createElement("p");
+    tagTime.className = "previous-comments__heading--time";
+    let tagComment = document.createElement("p");
+    tagComment.className = "previous-comments__comment"
 
 
-   //creating textnode
-   let nameText = document.createTextNode(name);
-   let bodyText = document.createTextNode(comment);
-   let timeText = document.createTextNode(timeStamp);
-   //appending
-   tagName.appendChild(nameText);
-   tagComment.appendChild(bodyText);
-   tagTime.appendChild(timeText);
+    //creating textnode
+    let nameText = document.createTextNode(name);
+    let bodyText = document.createTextNode(comment);
+    let timeText = document.createTextNode(timeStamp);
+    //appending
+    tagName.appendChild(nameText);
+    tagComment.appendChild(bodyText);
+    tagTime.appendChild(timeText);
 
-   //creating div elements
-   let divElementOne = document.createElement("div");
-   divElementOne.className = "previous-comments__box";
+    //creating div elements
 
-   let divElementTwo = document.createElement("div");
-   divElementTwo.className = "previous-comments__div";
 
-   let divElementThree = document.createElement("div");
+    let divElementOne = document.createElement("div");
+    divElementOne.className = "previous-comments__box";
 
-   let divElementFour = document.createElement("div");
-   divElementFour.className = "previous-comments__heading"
-  
 
-   let newElement = document.getElementById("comments");
-   //nesting elements
-   newElement.appendChild(divElementOne);
-   divElementOne.appendChild(tagIcon);
-   divElementOne.appendChild(divElementTwo);
-   divElementTwo.appendChild(divElementThree);
-   divElementThree.appendChild(divElementFour);
-   divElementFour.appendChild(tagName);
-   divElementFour.appendChild(tagTime);
-   divElementThree.appendChild(tagComment);
+    let divElementTwo = document.createElement("div");
+    divElementTwo.className = "previous-comments__div";
 
-   //reseting form upon reset
-   document.getElementById("submit-comments").reset();
+    let divElementThree = document.createElement("div");
+
+    let divElementFour = document.createElement("div");
+    divElementFour.className = "previous-comments__heading"
+
+
+    let newElement = document.getElementById("comments");
+    //nesting elements
+    newElement.appendChild(divElementOne);
+    divElementOne.appendChild(tagIcon);
+    divElementOne.appendChild(divElementTwo);
+    divElementTwo.appendChild(divElementThree);
+    divElementThree.appendChild(divElementFour);
+    divElementFour.appendChild(tagName);
+    divElementFour.appendChild(tagTime);
+    divElementThree.appendChild(tagComment);
+
+    //reseting form upon reset
+    document.getElementById("submit-comments").reset();
 
 }
