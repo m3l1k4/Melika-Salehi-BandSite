@@ -136,7 +136,7 @@ body {
 
 @media (min-width: 1200px) {
   .nav-bar {
-    padding-left: 15%;
+    padding-left: 152px;
     padding-top: 2rem;
     font-size: 16px;
     -webkit-box-orient: horizontal;
@@ -337,43 +337,81 @@ body {
   .hero-container__title {
     font-size: 60px;
     line-height: 68px;
-    padding-left: 180px;
+    padding-left: 152px;
   }
 }
 
 .feature {
-  padding-bottom: 3%;
   color: #323232;
+}
+
+@media (min-width: 320px) {
+  .feature {
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature {
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature {
+    padding-bottom: 48px;
+  }
+}
+
+.feature__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .feature__top--title {
   font-family: "Avenir-Next-Bold";
-  padding-left: 15%;
   font-size: 36px;
   line-height: 44px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 40px 40px;
 }
 
 @media (min-width: 320px) {
   .feature__top--title {
-    padding-left: 3%;
     font-size: 24px;
     line-height: 32px;
+    padding-left: 16px;
+    margin: 24px 0;
   }
 }
 
 @media (min-width: 768px) {
   .feature__top--title {
-    padding-left: 3%;
     font-size: 36px;
     line-height: 44px;
+    padding-left: 24px;
+    margin: 48px 0;
   }
 }
 
 @media (min-width: 1200px) {
   .feature__top--title {
-    padding-left: 15%;
     font-size: 36px;
     line-height: 44px;
+    padding-left: 152px;
+    margin: 48px 0;
   }
 }
 
@@ -381,7 +419,6 @@ body {
   .feature__top--img {
     width: 288px;
     height: auto;
-    padding-left: 3%;
   }
 }
 
@@ -389,7 +426,6 @@ body {
   .feature__top--img {
     width: 720px;
     height: auto;
-    padding-left: 3%;
   }
 }
 
@@ -397,7 +433,6 @@ body {
   .feature__top--img {
     width: 896px;
     height: auto;
-    padding-left: 15%;
   }
 }
 
@@ -407,8 +442,8 @@ body {
 
 @media (min-width: 320px) {
   .feature__quote {
-    padding-left: 3%;
-    padding-right: 1%;
+    padding-left: 16px;
+    padding-right: 16px;
     font-size: 16px;
     line-height: 24px;
     font-family: "Avenir-Next-Demi";
@@ -417,8 +452,8 @@ body {
 
 @media (min-width: 768px) {
   .feature__quote {
-    padding-left: 3%;
-    padding-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -426,8 +461,8 @@ body {
 
 @media (min-width: 1200px) {
   .feature__quote {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 152px;
+    padding-right: 152px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -437,51 +472,58 @@ body {
   font-family: "Avenir-Next-Demi";
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 1rem;
+  margin: 0;
 }
 
 @media (min-width: 320px) {
   .feature__sign {
-    padding-left: 3%;
+    padding-left: 16px;
+    padding-bottom: 32px;
   }
 }
 
 @media (min-width: 768px) {
   .feature__sign {
-    padding-left: 3%;
+    padding-left: 24px;
+    padding-bottom: 56px;
   }
 }
 
 @media (min-width: 1200px) {
   .feature__sign {
-    padding-left: 15%;
+    padding-left: 152px;
+    padding-bottom: 56px;
   }
+}
+
+.feature__article--title {
+  margin-top: 0;
 }
 
 @media (min-width: 320px) {
   .feature__article--title {
-    padding-left: 3%;
+    padding-left: 16px;
     font-size: 16px;
     font-family: "Avenir-Next-Demi";
-    font-weight: 24px;
+    margin-bottom: 24px;
   }
 }
 
 @media (min-width: 768px) {
   .feature__article--title {
-    padding-left: 3%;
+    padding-left: 24px;
     font-family: "Avenir-Next-Bold";
     font-size: 24px;
-    font-weight: 32px;
+    margin-bottom: 32px;
   }
 }
 
 @media (min-width: 1200px) {
   .feature__article--title {
-    padding-left: 15%;
+    padding-left: 152px;
     font-family: "Avenir-Next-Bold";
     font-size: 24px;
-    font-weight: 32px;
+    margin-bottom: 32px;
   }
 }
 
@@ -503,8 +545,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-left: 3%;
-    padding-bottom: 2rem;
+    padding: 0 16px;
   }
 }
 
@@ -513,12 +554,11 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 1% 0 1%;
+    padding: 0 24px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 0;
   }
 }
 
@@ -527,12 +567,11 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 13% 0 11%;
+    padding: 0 152px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 0;
   }
 }
 
@@ -542,25 +581,19 @@ body {
 
 @media (min-width: 320px) {
   .feature__article--body--text {
-    padding-left: 1%;
-    padding-top: 1rem;
     padding-right: 0;
   }
 }
 
 @media (min-width: 768px) {
   .feature__article--body--text {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0;
+    padding-right: 24px;
   }
 }
 
 @media (min-width: 1200px) {
   .feature__article--body--text {
-    padding-left: 3rem;
-    padding-top: 0;
-    padding-right: 0;
+    padding-right: 40px;
   }
 }
 
