@@ -438,35 +438,39 @@ body {
 
         
     }
-}
-
-.photo-gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-   // flex-direction: row;
-    justify-content: space-evenly;
-    align-self: center;
-
-    &__img {
-        @include mobile {
-            width: 288px;
-            height: 162px;
-            padding: 0 0 16px 0;
-        }
-
-        @include tablet {
-            width: 224px;
-            height: 126px;
-            padding: 12px 24px  12px 0px;
-        }
-        @include desktop {
-            width: 287px;
-            height: 161px;
-            padding: 12px 24px  12px 0px;
-            flex-basis: 30%;
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+       // flex-direction: row;
+        justify-content: space-evenly;
+        align-self: center;
+    
+        &--img {
+            @include mobile {
+                width: 288px;
+                height: 162px;
+                padding: 0 0 16px 0;
+            }
+    
+            @include tablet {
+                width: 224px;
+                height: 126px;
+                padding: 12px 24px  12px 0px;
+            }
+            @include desktop {
+                width: 287px;
+                height: 161px;
+                padding: 12px 24px  12px 0px;
+                flex-basis: 30%;
+            }
         }
     }
+
+
+
 }
+
+
 
 /*============*/
 

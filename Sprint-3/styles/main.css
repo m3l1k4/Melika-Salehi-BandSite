@@ -656,7 +656,7 @@ body {
   }
 }
 
-.photo-gallery-grid {
+.photo-gallery__grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,7 +670,7 @@ body {
 }
 
 @media (min-width: 320px) {
-  .photo-gallery-grid__img {
+  .photo-gallery__grid--img {
     width: 288px;
     height: 162px;
     padding: 0 0 16px 0;
@@ -678,7 +678,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .photo-gallery-grid__img {
+  .photo-gallery__grid--img {
     width: 224px;
     height: 126px;
     padding: 12px 24px  12px 0px;
@@ -686,7 +686,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .photo-gallery-grid__img {
+  .photo-gallery__grid--img {
     width: 287px;
     height: 161px;
     padding: 12px 24px  12px 0px;
