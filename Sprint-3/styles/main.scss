@@ -19,6 +19,7 @@ body {
     color: #fafafa;
 }
 .nav-bar {
+
     display: flex;
     justify-content: left;
     align-items: baseline;
@@ -34,8 +35,8 @@ body {
     }
 
     @include tablet {
-        padding-left: 5%;
-        padding-top: 2rem;
+        padding-left: 24px;
+        padding-top: 30px;
         font-size: 16px;
         flex-direction: row;
     }
@@ -147,38 +148,50 @@ body {
     height: auto;
     box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6, 0.5);
 
+    @include mobile{
+
+        height: 183px;
+    }
+
+    @include tablet{
+        height: 400px;
+    }
+
+    @include desktop{
+        height: 670px; 
+    }
+
+
+
     &__title {
         font-family: "Avenir-Next-Bold";
         color: #fafafa;
         margin: 0;
         font-size: 60px;
         line-height: 68px;
-        padding-left: 15%;
-        padding-top: 15%;
         padding-bottom: 15%;
+        padding-top: 15%;
 
         @include mobile {
             font-size: 24px;
             line-height: 32px;
-            padding-top: 15%;
-            padding-left: 5%;
-            padding-bottom: 15%;
+            padding-left: 16px;
+          
         }
 
         @include tablet {
             font-size: 60px;
             line-height: 68px;
-            padding-top: 15%;
-            padding-left: 5%;
-            padding-bottom: 15%;
+            padding-left: 24px;
+          
         }
 
         @include desktop {
             font-size: 60px;
             line-height: 68px;
-            padding-left: 15%;
-            padding-top: 15%;
-            padding-bottom: 15%;
+            padding-left: 180px;
+        
+        
         }
     }
 }
