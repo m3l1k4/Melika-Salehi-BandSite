@@ -1,42 +1,52 @@
-let api_key=  "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
+let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
 
 getInfo = () => {
-    axios.get("https://project-1-api.herokuapp.com/comments?api_key="+api_key)
+    axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
         .then(response => {
             //  console.log(response);
             console.log(response.data[2].name);
-            console.log("this is from axios");
+            console.log("this is get axios");
             insertComments(response);
-    
-        })
+            console.log(response.data.length);
 
+        })
 };
 
 getInfo();
 
 
-function insertComments(commentsResult){
+function insertComments(commentsResult) {
 
-    let nameTag = document.querySelectorAll('.previous-comments__heading--name ');
-    let timeTag = document.querySelectorAll('.previous-comments__heading--time');
-    let commentTag = document.querySelectorAll('.previous-comments__comment');
+    for (let i = 0; i < commentsResult.data.length; i++) {
+        console.log(commentsResult.data.length);
 
-    for (let i = 0; i < nameTag.length; i++) {
- 
-        nameTag[i].innerHTML = commentsResult.data[i].name;
-        commentTag[i].innerHTML = commentsResult.data[i].comment;
-        timeTag[i].innerHTML = epoch2Human(commentsResult.data[i].timestamp);
-     }
+        let nameVal = commentsResult.data[i].name;
+        let commentVal = commentsResult.data[i].comment;
+        let timeVal = epoch2Human(commentsResult.data[i].timestamp);
 
-
-    console.log("this is response");
-
+        newCommenter(nameVal, timeVal, commentVal)
+    }
+    console.log("this is insert");
 }
 
 
-function epoch2Human(timeStampString){
-    currentTime= new Date(timeStampString);
+function epoch2Human(timeStampString) {
+    currentTime = new Date(timeStampString);
+    let timeString = '';
+    timeDay = currentTime.getDate();
+    timeYear = currentTime.getFullYear();
+    timeMonth = currentTime.getMonth();
+    let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
+
+    return timeValue;
+}
+
+function getCurrentTime() {
+
+    let currentTime = new Date(); // Gets the date string at time of submission
+
+    //cleaning up the date string and concat into MM/DD/YYY format
     let timeString = '';
     timeDay = currentTime.getDate();
     timeYear = currentTime.getFullYear();
@@ -47,39 +57,38 @@ function epoch2Human(timeStampString){
 }
 
 
-
 document.getElementById("comment-submit-button").addEventListener("click",
-   function (event) {
-      event.preventDefault(); //prevents the page from reloading when submitting new comment
+    function (event) {
+        event.preventDefault(); //prevents the page from reloading when submitting new comment
 
-      let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
-      let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
-      let currentTime = new Date(); // Gets the date string at time of submission
+        let nameValue = document.getElementById("comment-name").value; // Retrieves the entered value in the name field
+        let commentValue = document.getElementById("comment-content").value; // Retrieves the entered value in the comment text box
+        let currentTime = new Date(); // Gets the date string at time of submission
+        //cleaning up the date string and concat into MM/DD/YYY format
+        let timeValue = epoch2Human(currentTime);
+        postInfo(nameValue, commentValue);
+        //pushed values to the the beginning of the array so most recent comment is always on top of the page
+        // joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
 
-      //cleaning up the date string and concat into MM/DD/YYY format
-      let timeValue = epoch2Human(currentTime);
-
-      //pushed values to the the beginning of the array so most recent comment is always on top of the page
-      joinTheConv.unshift({ name: nameValue, timeStamp: timeValue, comment: commentValue });
-
-      newCommenter(nameValue, timeValue, commentValue);
-      displayComment(joinTheConv);
-   });
+        newCommenter(nameValue, timeValue, commentValue);
+        // displayComment(joinTheConv);
+    });
 
 
-postInfo = () => {
-    axios.post("https://project-1-api.herokuapp.com/comments?api_key="+api_key,
-    {name: 'potato',
-    comment: 'hahaha',
-    timestamp:'1205209821'
-    })
-        .then(response => {
-          
-            console.log(response);
-            console.log("this is from axios");
-    
+postInfo = (nameVal, commentVal) => {
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=" + api_key,
+        {
+            name: nameVal,
+            comment: commentVal
         })
-        .catch (error =>{
+        .then(response => {
+
+            console.log(response);
+            console.log("this is post axios");
+            console.log(response.data.name)
+
+        })
+        .catch(error => {
             console.log(error);
         })
 
@@ -88,4 +97,58 @@ postInfo = () => {
 postInfo();
 
 
+function newCommenter(name, timeStamp, comment) {
 
+    //creating new elements and assigning class
+    let tagIcon = document.createElement("div");
+    tagIcon.className = "previous-comments__icon";
+
+
+    let tagName = document.createElement("h2");
+    tagName.className = "previous-comments__heading--name ";
+    let tagTime = document.createElement("p");
+    tagTime.className = "previous-comments__heading--time";
+    let tagComment = document.createElement("p");
+    tagComment.className = "previous-comments__comment"
+
+
+    //creating textnode
+    let nameText = document.createTextNode(name);
+    let bodyText = document.createTextNode(comment);
+    let timeText = document.createTextNode(timeStamp);
+    //appending
+    tagName.appendChild(nameText);
+    tagComment.appendChild(bodyText);
+    tagTime.appendChild(timeText);
+
+    //creating div elements
+
+
+    let divElementOne = document.createElement("div");
+    divElementOne.className = "previous-comments__box";
+
+
+    let divElementTwo = document.createElement("div");
+    divElementTwo.className = "previous-comments__div";
+
+    let divElementThree = document.createElement("div");
+
+    let divElementFour = document.createElement("div");
+    divElementFour.className = "previous-comments__heading"
+
+
+    let newElement = document.getElementById("comments");
+    //nesting elements
+    newElement.appendChild(divElementOne);
+    divElementOne.appendChild(tagIcon);
+    divElementOne.appendChild(divElementTwo);
+    divElementTwo.appendChild(divElementThree);
+    divElementThree.appendChild(divElementFour);
+    divElementFour.appendChild(tagName);
+    divElementFour.appendChild(tagTime);
+    divElementThree.appendChild(tagComment);
+
+    //reseting form upon reset
+    document.getElementById("submit-comments").reset();
+
+}
