@@ -501,6 +501,7 @@ body {
     }
 }
 
+
 .comments-form-header {
     font-family: "Avenir-Next-Bold";
     color: #323232;
@@ -537,26 +538,24 @@ body {
 
 .comments-form {
     background-color: #ffffff;
-
+    display: flex;
+    flex-direction: row;
     @include mobile {
         margin-left: 16px;
         margin-right: 16px;
-        display: flex;
-        flex-direction: row;
         align-items: left;
     }
     @include tablet {
-        display: flex;
-        flex-direction: row;
+       
         align-items: center;
         margin-left: 96px;
+        margin-right: 96px;
     }
 
     @include desktop {
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        margin-left: 30%;
+        margin-left: 336px;
+        margin-right: 336px;
     }
 
     &__icon {
@@ -583,6 +582,8 @@ body {
 
     &__field {
         flex: 1 0 0;
+        display: flex;
+        flex-direction: column;
 
         input:focus {
             border: 2px solid black;
@@ -692,24 +693,33 @@ body {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: solid 1px #e1e1e1;
+    
+   
+
+    @include mobile {
+        margin-left: 16px;
+    }
+
+    @include tablet {
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    @include desktop {
+        margin-left: 360px;
+        margin-right: 320px;
+    }
 
     &__box {
         display: flex;
         flex-direction: row;
+        border-top: solid 1px #e1e1e1;
+        padding-bottom: 24px;
 
-        @include mobile {
-            margin-left: 16px;
-        }
-
-        @include tablet {
-            margin-left: 96px;
-            margin-right: 96px;
-        }
-
-        @include desktop {
-            margin-left: 360px;
-            margin-right: 320px;
-        }
+ 
     }
 
     &__div {
@@ -726,11 +736,25 @@ body {
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
+            width: 232px;
+            height: auto;
+        }
+        @include tablet {
+            width: 504px;
+            height: auto;
+            justify-content: left;
+        }
+
+        @include desktop {
+            width: 448px;
+            height: auto;
+            justify-content: left;
         }
 
         &--time {
             color: #afafaf;
             font-family: "Avenir-Next-light";
+            padding-left: 1rem;
         }
 
         &--name {
