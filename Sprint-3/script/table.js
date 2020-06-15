@@ -1,7 +1,7 @@
 
 let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
-
+// send API request
 getInfo = () => {
     axios.get("https://project-1-api.herokuapp.com/showdates?api_key=" + api_key)
         .then(response => {
