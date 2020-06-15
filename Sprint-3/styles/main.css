@@ -928,14 +928,9 @@ body {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-}
-
-@media (min-width: 320px) {
-  .comments-form__icon {
-    margin: 0;
-    margin-right: 16px;
-    margin-top: 24px;
-  }
+  margin: 0;
+  margin-right: 16px;
+  margin-top: 24px;
 }
 
 .comments-form__field {
@@ -961,14 +956,9 @@ body {
 .comments-form__field--title {
   font-family: "Avenir-Next-Demi";
   color: #afafaf;
-}
-
-@media (min-width: 320px) {
-  .comments-form__field--title {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 0;
-  }
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
 }
 
 .comments-form__field--name {
@@ -991,7 +981,7 @@ body {
 
 @media (min-width: 768px) {
   .comments-form__field--name {
-    width: 520px;
+    width: 460px;
   }
 }
 
@@ -1022,7 +1012,7 @@ body {
 
 @media (min-width: 768px) {
   .comments-form__field--comment {
-    width: 520px;
+    width: 460px;
     margin-bottom: 24px;
   }
 }
@@ -1056,7 +1046,7 @@ body {
 @media (min-width: 768px) {
   .comments-form__field--button {
     width: 200px;
-    margin-left: 320px;
+    margin-left: 260px;
     margin-bottom: 24px;
   }
 }
