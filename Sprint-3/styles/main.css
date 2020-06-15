@@ -681,7 +681,7 @@ body {
   .photo-gallery__grid--img {
     width: 224px;
     height: 126px;
-    padding: 12px 24px  12px 0px;
+    padding: 12px 24px 12px 0px;
   }
 }
 
@@ -689,7 +689,7 @@ body {
   .photo-gallery__grid--img {
     width: 287px;
     height: 161px;
-    padding: 12px 24px  12px 0px;
+    padding: 12px 24px 12px 0px;
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
@@ -888,23 +888,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-bottom: solid 1px #e1e1e1;
 }
 
 @media (min-width: 320px) {
   .comments-form {
     margin-left: 16px;
     margin-right: 16px;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
   }
 }
 
 @media (min-width: 768px) {
   .comments-form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-left: 96px;
     margin-right: 96px;
   }
@@ -912,9 +907,6 @@ body {
 
 @media (min-width: 1200px) {
   .comments-form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-left: 336px;
     margin-right: 336px;
   }
@@ -1086,27 +1078,14 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  border-bottom: solid 1px #e1e1e1;
-}
-
-@media (min-width: 320px) {
-  .previous-comments {
-    margin-left: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  .previous-comments {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .previous-comments {
-    margin-left: 360px;
-    margin-right: 320px;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .previous-comments__box {
@@ -1117,49 +1096,72 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-top: solid 1px #e1e1e1;
+  border-bottom: solid 1px #e1e1e1;
   padding-bottom: 24px;
+  width: auto;
+  height: auto;
 }
 
 @media (min-width: 320px) {
-  .previous-comments__div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 0px;
-            flex: 1 0 0;
+  .previous-comments__box {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 288px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 768px) {
+  .previous-comments__box {
+    width: 528px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 1200px) {
+  .previous-comments__box {
+    width: 528px;
+    margin: 0;
   }
 }
 
 @media (min-width: 320px) {
+  .previous-comments__div {
+    width: 224px;
+  }
+}
+
+@media (min-width: 768px) {
+  .previous-comments__div {
+    width: 470px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .previous-comments__div {
+    width: 470px;
+  }
+}
+
+.previous-comments__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  height: auto;
+}
+
+@media (min-width: 320px) {
   .previous-comments__heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    width: 232px;
-    height: auto;
   }
 }
 
 @media (min-width: 768px) {
   .previous-comments__heading {
-    width: 504px;
-    height: auto;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -1168,8 +1170,6 @@ body {
 
 @media (min-width: 1200px) {
   .previous-comments__heading {
-    width: 448px;
-    height: auto;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -1206,15 +1206,10 @@ body {
   background-color: silver;
   -ms-flex-item-align: start;
       align-self: start;
-}
-
-@media (min-width: 320px) {
-  .previous-comments__icon {
-    margin-right: 16px;
-    margin-top: 12px;
-    width: 40px;
-    height: 40px;
-  }
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  margin-top: 12px;
 }
 
 .previous-comments__comment {
