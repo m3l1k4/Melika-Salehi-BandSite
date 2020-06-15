@@ -539,31 +539,26 @@ body {
 .comments-form-header {
     font-family: "Avenir-Next-Bold";
     color: #323232;
-
+    margin-bottom: 40px;
+    margin-top: 32px;
     @include mobile {
         font-size: 24px;
         line-height: 32px;
         margin-left: 16px;
         margin-right: 16px;
-        margin-bottom: 40px;
-        margin-top: 32px;
     }
 
     @include tablet {
         font-size: 36px;
         line-height: 44px;
-        margin-left: 16px;
-        margin-right: 16px;
-        margin-bottom: 40px;
-        margin-top: 32px;
+        margin-left: 24px;
+        margin-right: 24px;
     }
     @include desktop {
         font-size: 36px;
         line-height: 44px;
         margin-left: 132px;
         margin-right: 16px;
-        margin-bottom: 40px;
-        margin-top: 32px;
     }
 }
 
@@ -582,8 +577,9 @@ body {
         margin-right: 16px;
     }
     @include tablet {
-        margin-left: 96px;
+        margin-left: 120px;
         margin-right: 96px;
+        width: 528px;
     }
 
     @include desktop {
@@ -604,20 +600,23 @@ body {
         margin: 0;
         margin-right: 16px;
         margin-top: 24px;
-
-        @include mobile {
-        }
-        @include desktop {
-        }
-
-        @include tablet {
-        }
     }
 
     &__field {
         //  flex: 1 0 0;
         display: flex;
         flex-direction: column;
+
+        @include mobile {
+            width: 224px;
+        }
+        @include tablet {
+            width: 460px;
+        }
+
+        @include desktop {
+            width: 460px;
+        }
 
         input:focus {
             border: 2px solid black;
@@ -647,17 +646,6 @@ body {
             font-size: 14px;
             line-height: 20px;
             resize: none;
-
-            @include mobile {
-                width: 224px;
-            }
-            @include tablet {
-                width: 460px;
-            }
-
-            @include desktop {
-                width: 460px;
-            }
         }
 
         &--comment {
@@ -672,15 +660,9 @@ body {
             resize: none;
 
             @include mobile {
-                width: 224px;
                 margin-bottom: 16px;
             }
             @include tablet {
-                width: 460px;
-                margin-bottom: 24px;
-            }
-            @include desktop {
-                width: 460px;
                 margin-bottom: 24px;
             }
         }
@@ -729,6 +711,7 @@ body {
         display: flex;
         flex-direction: row;
         border-bottom: solid 1px #e1e1e1;
+
         padding-bottom: 24px;
 
         width: auto;

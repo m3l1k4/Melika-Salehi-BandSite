@@ -838,6 +838,8 @@ body {
 .comments-form-header {
   font-family: "Avenir-Next-Bold";
   color: #323232;
+  margin-bottom: 40px;
+  margin-top: 32px;
 }
 
 @media (min-width: 320px) {
@@ -846,8 +848,6 @@ body {
     line-height: 32px;
     margin-left: 16px;
     margin-right: 16px;
-    margin-bottom: 40px;
-    margin-top: 32px;
   }
 }
 
@@ -855,10 +855,8 @@ body {
   .comments-form-header {
     font-size: 36px;
     line-height: 44px;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 40px;
-    margin-top: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
 
@@ -868,8 +866,6 @@ body {
     line-height: 44px;
     margin-left: 132px;
     margin-right: 16px;
-    margin-bottom: 40px;
-    margin-top: 32px;
   }
 }
 
@@ -899,8 +895,9 @@ body {
 
 @media (min-width: 768px) {
   .comments-form {
-    margin-left: 96px;
+    margin-left: 120px;
     margin-right: 96px;
+    width: 528px;
   }
 }
 
@@ -937,6 +934,24 @@ body {
           flex-direction: column;
 }
 
+@media (min-width: 320px) {
+  .comments-form__field {
+    width: 224px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__field {
+    width: 460px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments-form__field {
+    width: 460px;
+  }
+}
+
 .comments-form__field input:focus {
   border: 2px solid black;
   outline: none;
@@ -967,24 +982,6 @@ body {
   resize: none;
 }
 
-@media (min-width: 320px) {
-  .comments-form__field--name {
-    width: 224px;
-  }
-}
-
-@media (min-width: 768px) {
-  .comments-form__field--name {
-    width: 460px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .comments-form__field--name {
-    width: 460px;
-  }
-}
-
 .comments-form__field--comment {
   border: 1px solid #afafaf;
   -webkit-box-sizing: border-box;
@@ -999,21 +996,12 @@ body {
 
 @media (min-width: 320px) {
   .comments-form__field--comment {
-    width: 224px;
     margin-bottom: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .comments-form__field--comment {
-    width: 460px;
-    margin-bottom: 24px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .comments-form__field--comment {
-    width: 460px;
     margin-bottom: 24px;
   }
 }
