@@ -268,7 +268,7 @@ body {
 
 @media (min-width: 1200px) {
   .nav-bar__logo {
-    padding: 0  0;
+    padding: 0 0;
   }
 }
 
@@ -428,7 +428,7 @@ body {
 }
 
 /*============*/
-main {
+html {
   background-color: #fafafa;
 }
 
@@ -479,21 +479,19 @@ main {
   font-size: 36px;
   line-height: 44px;
   color: #323232;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 320px) {
   .shows__header-title {
     padding-top: 32px;
-    margin-top: 0;
-    margin-bottom: 40px;
   }
 }
 
 @media (min-width: 1200px) {
   .shows__header-title {
     padding-top: 48px;
-    margin-top: 0;
-    margin-bottom: 40px;
   }
 }
 
@@ -519,12 +517,34 @@ main {
 }
 
 .shows__info {
+  font-family: "Avenir-Next-Light";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #323232;
 }
 
 @media (min-width: 320px) {
   .shows__info {
-    font-family: "Avenir-Next-Light";
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 288px;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shows__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 140px;
   }
 }
 

@@ -73,7 +73,6 @@ body {
 
     &__text {
         list-style-type: none;
-        
 
         &--passive {
             @include mobile {
@@ -90,7 +89,6 @@ body {
             @include desktop {
                 width: 80px;
                 margin-left: 56px;
-                
             }
         }
 
@@ -108,38 +106,32 @@ body {
                 width: 80px;
                 padding-bottom: 1.5rem;
                 margin-left: 56px;
-   
             }
 
             @include desktop {
                 width: 80px;
                 padding-bottom: 1.5rem;
                 margin-left: 56px;
-          
             }
         }
     }
 
     &__logo {
-
         @include mobile {
             padding-bottom: 1rem;
-          padding-left: 100px;
+            padding-left: 100px;
             padding-right: 60px;
         }
 
         @include tablet {
-     
-          padding: 0 0;
+            padding: 0 0;
         }
 
         @include desktop {
-           
-          padding:0  0;
+            padding: 0 0;
         }
     }
 }
-
 
 .hero-container {
     background-image: url("../assets/images/hero.jpg");
@@ -162,8 +154,6 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        
-      
     }
 
     &__iframe {
@@ -197,7 +187,6 @@ body {
             margin-top: 262px;
             width: 430px;
             height: 140px;
-           
         }
     }
 
@@ -267,7 +256,7 @@ body {
     }
 }
 /*============*/
-main {
+html {
     background-color: #fafafa;
 }
 
@@ -290,6 +279,8 @@ main {
         margin-bottom: 40px;
     }
 
+
+
     &__box {
         border-bottom: 1px solid #e1e1e1;
 
@@ -305,17 +296,15 @@ main {
         font-size: 36px;
         line-height: 44px;
         color: #323232;
+        margin-top: 0;
+        margin-bottom: 40px;
 
         @include mobile {
             padding-top: 32px;
-            margin-top: 0;
-            margin-bottom: 40px;
         }
 
         @include desktop {
             padding-top: 48px;
-            margin-top: 0;
-            margin-bottom: 40px;
         }
     }
 
@@ -336,8 +325,21 @@ main {
     }
 
     &__info {
+        font-family: "Avenir-Next-Light";
+
+        display: flex;
+
         @include mobile {
-            font-family: "Avenir-Next-Light";
+            flex-wrap: nowrap;
+            width: 288px;
+        }
+        @include tablet {
+            flex-wrap: wrap;
+            width: 140px;
+        }
+        @include desktop {
+            flex-wrap: wrap;
+            width: 140px;
         }
 
         color: #323232;
