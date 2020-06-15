@@ -1,6 +1,6 @@
 let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
-
+//Sends API request
 getInfo = () => {
     axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
         .then(response => {
@@ -13,7 +13,7 @@ getInfo = () => {
 
 getInfo();
 
-
+// iterates through results array and imports comments into page elemtns
 function insertComments(commentsResult) {
 
     for (let i = 0; i < commentsResult.data.length; i++) {
@@ -28,7 +28,7 @@ function insertComments(commentsResult) {
 
 }
 
-
+// converst time string retrieved from API to MM/DD/YYYY format
 function epoch2Human(timeStampString) {
     currentTime = new Date(timeStampString);
     let timeString = '';
@@ -39,21 +39,6 @@ function epoch2Human(timeStampString) {
 
     return timeValue;
 }
-
-function getCurrentTime() {
-
-    let currentTime = new Date(); // Gets the date string at time of submission
-
-    //cleaning up the date string and concat into MM/DD/YYY format
-    let timeString = '';
-    timeDay = currentTime.getDate();
-    timeYear = currentTime.getFullYear();
-    timeMonth = currentTime.getMonth();
-    let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
-
-    return timeValue;
-}
-
 
 document.getElementById("comment-submit-button").addEventListener("click",
     function (event) {
@@ -73,6 +58,7 @@ document.getElementById("comment-submit-button").addEventListener("click",
     });
 
 
+//Sends PAi request to post things
 postInfo = (nameVal, commentVal) => {
     axios.post("https://project-1-api.herokuapp.com/comments?api_key=" + api_key,
         {
@@ -80,7 +66,6 @@ postInfo = (nameVal, commentVal) => {
             comment: commentVal
         })
         .then(response => {
-
 
         })
         .catch(error => {
@@ -91,7 +76,7 @@ postInfo = (nameVal, commentVal) => {
 
 postInfo();
 
-
+//creates page elements
 function newCommenter(name, timeStamp, comment) {
 
     //creating new elements and assigning class

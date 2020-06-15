@@ -20,7 +20,7 @@ function createListElements(showsList) {
 
     let showsDivOne = document.getElementById("shows");
 
-    console.log(showsList.data.length);
+
     for (let i = 0; i < showsList.data.length; i++) {
 
         let showsDivtwo = document.createElement("div");
