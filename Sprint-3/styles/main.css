@@ -888,6 +888,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-bottom: solid 1px #e1e1e1;
 }
 
@@ -914,8 +919,8 @@ body {
 
 .comments-form__icon {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   background-position: left;
   background-size: cover;
@@ -934,9 +939,6 @@ body {
 }
 
 .comments-form__field {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
