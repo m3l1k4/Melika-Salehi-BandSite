@@ -297,6 +297,16 @@ body {
 @media (min-width: 1200px) {
   .hero-container {
     height: 670px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -332,8 +342,9 @@ body {
 
 @media (min-width: 1200px) {
   .hero-container__iframe {
-    margin-left: 60%;
-    margin-top: 2%;
+    margin-right: 64px;
+    margin-left: 64px;
+    margin-top: 262px;
     width: 430px;
     height: 140px;
   }
@@ -374,12 +385,12 @@ body {
 
 @media (min-width: 1200px) {
   .hero-container__title {
-    font-size: 60px;
-    line-height: 68px;
-    padding-left: 15%;
+    font-size: 50px;
+    line-height: 58px;
+    padding-left: 152px;
     padding-top: 44px;
     padding-bottom: 0;
-    padding-right: 35%;
+    padding-right: 0%;
   }
 }
 
@@ -411,7 +422,7 @@ body {
   .hero-container__title-small {
     font-size: 24px;
     line-height: 32px;
-    padding-left: 180px;
+    padding-left: 152px;
     padding-top: 160px;
   }
 }

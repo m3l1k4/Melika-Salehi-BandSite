@@ -72,7 +72,6 @@ body {
 
     &__text {
         list-style-type: none;
-        
 
         &--passive {
             @include mobile {
@@ -89,7 +88,6 @@ body {
             @include desktop {
                 width: 80px;
                 margin-left: 56px;
-                
             }
         }
 
@@ -107,35 +105,29 @@ body {
                 width: 80px;
                 padding-bottom: 1.5rem;
                 margin-left: 56px;
-   
             }
 
             @include desktop {
                 width: 80px;
                 padding-bottom: 1.5rem;
                 margin-left: 56px;
-          
             }
         }
     }
 
     &__logo {
-
-       
         @include mobile {
             padding-bottom: 1rem;
             padding-left: 100px;
-              padding-right: 60px;
+            padding-right: 60px;
         }
 
         @include tablet {
-     
             padding: 0 0;
         }
 
         @include desktop {
-           
-            padding:0  0;
+            padding: 0 0;
         }
     }
 }
@@ -614,7 +606,6 @@ body {
         margin-top: 24px;
 
         @include mobile {
-          
         }
         @include desktop {
         }
@@ -624,7 +615,7 @@ body {
     }
 
     &__field {
-      //  flex: 1 0 0;
+        //  flex: 1 0 0;
         display: flex;
         flex-direction: column;
 
@@ -644,7 +635,6 @@ body {
             font-size: 14px;
             line-height: 22px;
             margin: 0;
-
         }
 
         &--name {
@@ -734,7 +724,6 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    
 
     &__box {
         display: flex;
