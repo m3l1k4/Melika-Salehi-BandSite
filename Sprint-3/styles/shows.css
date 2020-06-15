@@ -137,12 +137,6 @@ body {
 @media (min-width: 1200px) {
   .nav-bar {
     padding-left: 152px;
-    padding-top: 2rem;
-    font-size: 16px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
 }
 
@@ -183,16 +177,6 @@ body {
 
 @media (min-width: 1200px) {
   .nav-bar__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding-left: 1rem;
   }
 }
@@ -210,13 +194,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .nav-bar__text--passive {
-    width: 80px;
-    margin-left: 56px;
-  }
-}
-
-@media (min-width: 1200px) {
   .nav-bar__text--passive {
     width: 80px;
     margin-left: 56px;
@@ -244,14 +221,6 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .nav-bar__text--active {
-    width: 80px;
-    padding-bottom: 1.5rem;
-    margin-left: 56px;
-  }
-}
-
 @media (min-width: 320px) {
   .nav-bar__logo {
     padding-bottom: 1rem;
@@ -261,12 +230,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .nav-bar__logo {
-    padding: 0 0;
-  }
-}
-
-@media (min-width: 1200px) {
   .nav-bar__logo {
     padding: 0 0;
   }
@@ -296,7 +259,6 @@ body {
 
 @media (min-width: 1200px) {
   .hero-container {
-    height: 670px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -390,20 +352,20 @@ body {
     padding-left: 152px;
     padding-top: 44px;
     padding-bottom: 0;
-    padding-right: 0%;
+    padding-right: 0;
   }
 }
 
 .hero-container__title-small {
-  font-family: "Avenir-Next-Light";
+  font-family: "Avenir-Next-Demi";
   color: #fafafa;
   margin: 0;
 }
 
 @media (min-width: 320px) {
   .hero-container__title-small {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
     padding-left: 24px;
     padding-top: 64px;
   }
@@ -411,8 +373,8 @@ body {
 
 @media (min-width: 768px) {
   .hero-container__title-small {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 32px;
     padding-left: 24px;
     padding-top: 96px;
   }
@@ -420,8 +382,6 @@ body {
 
 @media (min-width: 1200px) {
   .hero-container__title-small {
-    font-size: 24px;
-    line-height: 32px;
     padding-left: 152px;
     padding-top: 160px;
   }
@@ -452,7 +412,6 @@ html {
   .shows {
     margin-left: 180px;
     margin-right: 180px;
-    margin-bottom: 40px;
   }
 }
 
@@ -540,14 +499,6 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
-  .shows__info {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 140px;
-  }
-}
-
 .shows__date {
   color: #323232;
   font-family: "Avenir-Next-Demi";
@@ -588,12 +539,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .shows__buy-tickets {
-    width: 160px;
-  }
-}
-
-@media (min-width: 1200px) {
   .shows__buy-tickets {
     width: 160px;
   }
@@ -643,21 +588,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-}
-
-@media (min-width: 1200px) {
-  .footer-heading__left-div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
 }
 
 @media (min-width: 768px) {
