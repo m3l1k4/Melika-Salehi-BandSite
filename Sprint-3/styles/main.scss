@@ -72,21 +72,24 @@ body {
 
     &__text {
         list-style-type: none;
+        
 
         &--passive {
             @include mobile {
-                padding-left: 2.5rem;
-                padding-right: 2rem;
+                width: 160px;
+                text-align: center;
+                margin-left: 0;
             }
 
             @include tablet {
-                padding-left: 0;
-                padding-right: 0;
+                width: 80px;
+                margin-left: 56px;
             }
 
             @include desktop {
-                padding-left: 0;
-                padding-right: 0;
+                width: 80px;
+                margin-left: 56px;
+                
             }
         }
 
@@ -94,46 +97,45 @@ body {
             border-bottom: 3px solid white;
 
             @include mobile {
+                width: 160px;
                 padding-bottom: 1rem;
                 text-align: center;
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
-                margin-right: 0;
+                margin-left: 0;
             }
 
             @include tablet {
+                width: 80px;
                 padding-bottom: 1.5rem;
-                margin-right: 4rem;
-                padding-left: 0;
-                padding-right: 0;
+                margin-left: 56px;
+   
             }
 
             @include desktop {
+                width: 80px;
                 padding-bottom: 1.5rem;
-                margin-right: 4rem;
-                padding-left: 0;
-                padding-right: 0;
+                margin-left: 56px;
+          
             }
         }
     }
 
     &__logo {
+
+       
         @include mobile {
-            padding-left: 50%;
-            padding-right: 0;
             padding-bottom: 1rem;
+            padding-left: 100px;
+              padding-right: 60px;
         }
 
         @include tablet {
-            padding-right: 3rem;
-            padding-left: 0;
-            padding-bottom: 0;
+     
+            padding: 0 0;
         }
 
         @include desktop {
-            padding-right: 3rem;
-            padding-left: 0;
-            padding-bottom: 0;
+           
+            padding:0  0;
         }
     }
 }
