@@ -4,11 +4,9 @@ let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 getInfo = () => {
     axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
         .then(response => {
-            //  console.log(response);
-            console.log(response.data[2].name);
-            console.log("this is get axios");
+
             insertComments(response);
-            console.log(response.data.length);
+
 
         })
 };
@@ -19,7 +17,7 @@ getInfo();
 function insertComments(commentsResult) {
 
     for (let i = 0; i < commentsResult.data.length; i++) {
-        console.log(commentsResult.data.length);
+
 
         let nameVal = commentsResult.data[i].name;
         let commentVal = commentsResult.data[i].comment;
@@ -27,7 +25,7 @@ function insertComments(commentsResult) {
 
         newCommenter(nameVal, timeVal, commentVal)
     }
-    console.log("this is insert");
+
 }
 
 
@@ -83,9 +81,6 @@ postInfo = (nameVal, commentVal) => {
         })
         .then(response => {
 
-            console.log(response);
-            console.log("this is post axios");
-            console.log(response.data.name)
 
         })
         .catch(error => {
